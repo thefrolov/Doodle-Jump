@@ -48,8 +48,8 @@ class Doodle(pygame.sprite.Sprite):
         self.rect.center = (self.x,self.y)
         
     def incY(self,y):
-        if y < 0:
-            self.score = self.score + abs(y)
+        #if y < 0:
+            #self.score = self.score + abs(y)
             #print self.score
         self.y = self.y + y
 
@@ -119,7 +119,7 @@ class Platform(pygame.sprite.Sprite):
                 self.way = - self.way
         elif self.pType == 2:
             if self.crashed == 1:
-                self.image = pygame.image.load('img/blueplatformbr.png').convert()
+                self.image = pygame.image.load('img/brownplatformbr.png').convert()
                 self.image.set_colorkey(self.image.get_at((0,0)), RLEACCEL)
                 self.rect = self.image.get_rect()
                 self.rect.center = (self.x,self.y)
@@ -167,12 +167,12 @@ class Header(pygame.Surface):
         
 class TextSprite(pygame.sprite.Sprite):
  
-    def __init__(self, x, y, text=''):
+    def __init__(self, x, y, text='', size=35, color=(255, 255, 255)):
         pygame.sprite.Sprite.__init__(self)
         self.x = x
         self.y = y
-        self.font = pygame.font.Font(None, 25)  # load the default font, size 25
-        self.color = (255, 165, 149)         # our font color in rgb
+        self.font = pygame.font.Font(None, size)  # load the default font, size 25
+        self.color = color         # our font color in rgb
         self.text = text
         self.generateImage() # generate the image
  
@@ -181,6 +181,9 @@ class TextSprite(pygame.sprite.Sprite):
         self.generateImage()
     def setColor(self, color):
         self.color = color
+        self.generateImage()
+    def setSize(self, size):
+        self.font = pygame.font.Font(None, size)
         self.generateImage()
     
     def generateImage(self):
