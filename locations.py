@@ -118,10 +118,10 @@ class Game_location(Location):
                                 spr.crashed = 1
                                 spr._move()
                     
-                
+            self.allsprites.draw(self.window)   
             self.score_sprite.setText("               %s,    %s" % (self.doodle.name, int(self.doodle.score/10)))
             self.window.blit(self.header, (0,0))
-            self.allsprites.draw(self.window)
+            
             
         else:
             #if dead - load exit location
