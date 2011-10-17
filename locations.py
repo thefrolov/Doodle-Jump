@@ -2,7 +2,7 @@
 
 import pygame
 from pygame.locals import *
-from sprites import Doodle, Platform, Header, Button, TextSprite
+from sprites import Doodle, Platform, MovingPlatform, Header, Button, TextSprite
 from random import randint
 import sys
 
@@ -20,7 +20,7 @@ class Location(object):
 
 
 # first menu location
-class Start_location(Location):
+class StartLocation(Location):
     
     def __init__(self, parent):
         Location.__init__(self, parent)
@@ -49,7 +49,7 @@ class Start_location(Location):
                     btn.changeState(0)
         elif event.type == MOUSEBUTTONUP:
             if self.startbtn.rect.collidepoint(pygame.mouse.get_pos()):
-                self.parent.location = Game_location(self.parent,"Vasya")
+                self.parent.location = GameLocation(self.parent,"Vasya")
             elif self.exitbtn.rect.collidepoint(pygame.mouse.get_pos()):
                 sys.exit()
 
@@ -58,82 +58,77 @@ class Start_location(Location):
 
 
 # gameplay location
-class Game_location(Location):
+class GameLocation(Location):
     
     gravitation = 0.2
     
     def __init__(self, parent, name):
         Location.__init__(self, parent)
         pygame.mouse.set_visible(0)
-        self.doodle = Doodle()
+        self.doodle = Doodle(name)
         self.doodle.name = name
         self.allsprites = pygame.sprite.Group()
         self.allsprites.add(self.doodle)
-        for i in range(0, 14):
-            self.allsprites.add(Platform(randint(-100, 450), randint(0, 640), randint(0, 2)))
+        for i in range(0, 8):
+            self.allsprites.add(self.randomPlatform(randint(-100, 450), randint(0, 640)))
         self.score_sprite = TextSprite(50,25,self.doodle.name, 45, (0,0,0))
         self.allsprites.add(self.score_sprite)
         self.header = Header()
     
     def draw(self):
         self.window.blit(self.background, (0, 0))
-        
-        if self.doodle.alive == 1: 
+        if self.doodle.alive == 1:
+
             # doodler jumps
             mousePos = pygame.mouse.get_pos()
-            self.doodle.ySpeed = self.doodle.ySpeed - self.gravitation
-            self.doodle.incY(-self.doodle.ySpeed)
+            self.doodle.incYSpeed(-self.gravitation)
             self.doodle.setX(mousePos[0])
-            self.doodle._move()
-            
-            
-             # moving whole world
-            if self.doodle.ySpeed > 3 and self.doodle.y < 300:
-                for spr in self.allsprites:                                    
-                    if type(spr).__name__ != "TextSprite":
-                        spr._moveY(self.doodle.ySpeed)
-                        self.doodle.score = int(self.doodle.score + self.doodle.ySpeed)
-            
-            # renew platforms                    
+            self.doodle.moveY(-self.doodle.ySpeed)
             for spr in self.allsprites:
-                if type(spr).__name__ == "Platform" and spr.y > 630:         
-                    spr.x = randint(10, 470)
-                    spr.y = randint(-50, -30) + randint(0, 30)
-                    spr.changepType(randint(0, 2))
-                    spr._move()
+                # if platform under legs
+                if isinstance(spr, Platform) and self.doodle.getLegsRect().colliderect(spr.getSurfaceRect()) and self.doodle.ySpeed <= 0:
+                    self.doodle.ySpeed = 10
             
-            # move blue and crashed platforms
-            for spr in self.allsprites:
-                if type(spr).__name__ == "Platform":
-                    if spr.pType == 1 or (spr.pType == 2 and spr.crashed == 2): 
-                        spr._move()
-                                        
-                    # if platform under legs
-                    if self.doodle.getLegsRect().colliderect(spr.getSurfaceRect()) and self.doodle.ySpeed < 0:
-                        if spr.pType == 0 or spr.pType == 1:
-                            self.doodle.ySpeed = 10
-                             
-                        elif spr.pType == 2:
-                            if spr.crashed == 0:
-                                spr.crashed = 1
-                                spr._move()
-                    
-            self.allsprites.draw(self.window)   
+                if isinstance(spr, Platform):
+                    # renew platforms
+                    if spr.y >= 640:
+                        spr.setX(randint(10, 470))
+                        spr.setY(randint(-50, -30) + randint(0, 30))
+                
+                # move blue and crashed platforms
+                if isinstance(spr,MovingPlatform):
+                       spr.move()
+            
+            # moving whole world    
+            if self.doodle.y < 300:
+                self.doodle.incScore(self.doodle.ySpeed)
+                for spr in self.allsprites:
+                    if not isinstance(spr, TextSprite):
+                        spr.moveY(self.doodle.ySpeed)
+            
+            
+            #draw all on canvas
+            self.allsprites.draw(self.window) 
             self.score_sprite.setText("               %s,    %s" % (self.doodle.name, int(self.doodle.score/10)))
             self.window.blit(self.header, (0,0))
-            
-            
         else:
             #if dead - load exit location
-            self.parent.location = Game_location(self.parent,self.doodle.name)
+            self.parent.location = GameLocation(self.parent,self.doodle.name)
 
     def event(self,event):
         if event.type == KEYDOWN:
             print event.key
+            
+    def randomPlatform(self, x , y):
+        dig = randint(0, 100)
+        if dig < 35:
+            return MovingPlatform(x,y)
+        else:
+            return Platform(x,y)
 
 
 # game stats and exit location
-class Exit_location(Location):
+class ExitLocation(Location):
     def __init__(self, parent, name, score):
         Location.__init__(self, parent)
         self.background = pygame.image.load('img/background.png')

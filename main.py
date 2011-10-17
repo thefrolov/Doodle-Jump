@@ -22,18 +22,17 @@ class Game():
             sys.exit()
         elif event.type == KEYUP:
             if event.key == K_ESCAPE:
-                if type(self.location).__name__ == "Game_location":
-                    self.location = Start_location(self)
+                if isinstance(self.location, GameLocation):
+                    self.location = StartLocation(self)
+                elif isinstance(self.location, StartLocation):
+                    sys.exit()
                 
-
 
 # main function
 def main():
     game = Game()
 
-    start_location = Start_location(game)
-    #game_location = Game_location(game)
-    #exit_location = Exit_location()
+    start_location = StartLocation(game)
 
     game.location = start_location
 
