@@ -2,7 +2,7 @@
 
 import pygame
 from pygame.locals import *
-
+from random import randint
 
 # Base class for sprites
 class Sprite(pygame.sprite.Sprite):
@@ -103,6 +103,10 @@ class Platform(Sprite):
         Sprite.__init__(self, x, y)
         if type(self).__name__ == "Platform":
             self.initImg('img/greenplatform.png')
+    
+    def renew(self):
+        self.setX(randint(10, 470))
+        self.setY(randint(-50, -30) + randint(0, 30))
         
 
 class MovingPlatform(Platform):
@@ -120,54 +124,27 @@ class MovingPlatform(Platform):
 class CrashingPlatform(Platform):
     def __init__(self, x, y):
         Platform.__init__(self, x, y)
-        self.initImg('img/brownplatform.png')    
+        self.initImg('img/brownplatform.png')
         self.ySpeed = 10
         self.crashed = 0
     
-#     def changepType(self, pType):
-#         if not pType == self.pType:
-#             if pType == 0:
-#                 self.image = pygame.image.load('img/greenplatform.png').convert()
-#             elif pType == 1:
-#                 self.image = pygame.image.load('img/blueplatform.png').convert()
-#                 self.way = -1 # 1 or -1 platform way
-#                 self.xSpeed = 5
-#             elif pType == 2:
-#                 self.image = pygame.image.load('img/brownplatform.png').convert()
-#                 self.ySpeed = 10
-#                 self.crashed = 0
-#             
-#             self.image.set_colorkey(self.image.get_at((0,0)), RLEACCEL)
-#             self.rect = self.image.get_rect()
-#             self.rect.center = (self.x,self.y)
-#             self.pType = pType
+    def crash(self):
+        self.initImg('img/brownplatformbr.png')
+        self.crashed = 1
     
-#     def _move(self):
-#         if self.pType == 0:
-#             pass
-#         
-#         elif self.pType == 1:
-#             self.x = self.x + self.xSpeed*self.way
-#             if self.x < 20 or self.x > 460:
-#                 self.way = - self.way
-#         elif self.pType == 2:
-#             if self.crashed == 1:
-#                 self.image = pygame.image.load('img/brownplatformbr.png').convert()
-#                 self.image.set_colorkey(self.image.get_at((0,0)), RLEACCEL)
-#                 self.rect = self.image.get_rect()
-#                 self.rect.center = (self.x,self.y)
-#                 self.crashed = 2
-#             elif self.crashed == 2:
-#                 self.y = self.y + self.ySpeed
-#                 
-#         self.rect.center = (self.x,self.y)
-#         
-#     def _moveY(self, speed):
-#         self.y = self.y + speed
-#         self.rect.center = (self.x,self.y)
-#         
-
-
+    def move(self):
+        if self.crashed == 0:
+            pass
+        
+        elif self.crashed == 1:
+            self.moveY(self.ySpeed)
+    def renew(self):
+        Platform.renew(self)
+        #self.setX(randint(10, 470))
+        #self.setY(randint(-50, -30) + randint(0, 30))
+        self.initImg('img/brownplatform.png')
+        self.crashed = 0
+        
 
 class Button(Sprite):
     x = 0

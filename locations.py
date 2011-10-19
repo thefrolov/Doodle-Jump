@@ -2,9 +2,9 @@
 
 import pygame
 from pygame.locals import *
-from sprites import Doodle, Platform, MovingPlatform, Header, Button, TextSprite
-from random import randint
+from sprites import Doodle, Platform, MovingPlatform, CrashingPlatform, Header, Button, TextSprite
 import sys
+from random import randint
 
 # Base class for location
 class Location(object):
@@ -75,6 +75,16 @@ class GameLocation(Location):
         self.allsprites.add(self.score_sprite)
         self.header = Header()
     
+    
+    def randomPlatform(self, x , y):
+        dig = randint(0, 100)
+        if dig < 35:
+            return MovingPlatform(x,y)
+        elif dig >= 35 and dig < 50:
+            return CrashingPlatform(x,y)
+        else:
+            return Platform(x,y)
+    
     def draw(self):
         self.window.blit(self.background, (0, 0))
         if self.doodle.alive == 1:
@@ -87,17 +97,20 @@ class GameLocation(Location):
             for spr in self.allsprites:
                 # if platform under legs
                 if isinstance(spr, Platform) and self.doodle.getLegsRect().colliderect(spr.getSurfaceRect()) and self.doodle.ySpeed <= 0:
+                    if isinstance(spr,CrashingPlatform):
+                        spr.crash()
+                        break
                     self.doodle.ySpeed = 10
             
                 if isinstance(spr, Platform):
                     # renew platforms
                     if spr.y >= 640:
-                        spr.setX(randint(10, 470))
-                        spr.setY(randint(-50, -30) + randint(0, 30))
+                        spr.renew()
+
                 
                 # move blue and crashed platforms
-                if isinstance(spr,MovingPlatform):
-                       spr.move()
+                if isinstance(spr,MovingPlatform) or (isinstance(spr,CrashingPlatform) and spr.crashed == 1):
+                    spr.move()
             
             # moving whole world    
             if self.doodle.y < 300:
@@ -119,12 +132,7 @@ class GameLocation(Location):
         if event.type == KEYDOWN:
             print event.key
             
-    def randomPlatform(self, x , y):
-        dig = randint(0, 100)
-        if dig < 35:
-            return MovingPlatform(x,y)
-        else:
-            return Platform(x,y)
+
 
 
 # game stats and exit location
