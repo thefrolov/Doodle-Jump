@@ -74,6 +74,7 @@ class GameLocation(Location):
         self.score_sprite = TextSprite(50,25,self.doodle.name, 45, (0,0,0))
         self.allsprites.add(self.score_sprite)
         self.header = Header()
+        self.window.blit(self.background, (0, 0))
     
     
     def randomPlatform(self, x , y):
@@ -86,9 +87,8 @@ class GameLocation(Location):
             return Platform(x,y)
     
     def draw(self):
-        self.window.blit(self.background, (0, 0))
         if self.doodle.alive == 1:
-
+            self.allsprites.clear(self.window, self.background)
             # doodler jumps
             mousePos = pygame.mouse.get_pos()
             self.doodle.incYSpeed(-self.gravitation)
