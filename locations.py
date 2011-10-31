@@ -12,7 +12,7 @@ class Location(object):
     def __init__(self, parent):
         self.window = pygame.display.get_surface()
         self.parent = parent
-        self.background = pygame.image.load('img/background.png')
+        self.background = pygame.image.load('img/background.png').convert()
     def event(self,event):
         pass
     def draw(self):
