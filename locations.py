@@ -33,9 +33,10 @@ class StartLocation(Location):
         self.buttons_captions.add(self.exitbtn.textSprite)
         self.buttons.add(self.startbtn)
         self.buttons.add(self.exitbtn)
+        self.window.blit(self.background, (0, 0))
         
     def draw(self):
-        self.window.blit(self.background, (0, 0))        
+        self.buttons.clear(self.window, self.background)
         self.buttons.draw(self.window)
         self.buttons_captions.draw(self.window)
     def event(self,event):
