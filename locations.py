@@ -12,7 +12,7 @@ class Location(object):
     def __init__(self, parent):
         self.window = pygame.display.get_surface()
         self.parent = parent
-        self.background = pygame.image.load('img/background.png')
+        self.background = pygame.image.load('img/background.png').convert()
     def event(self,event):
         pass
     def draw(self):
@@ -33,9 +33,10 @@ class StartLocation(Location):
         self.buttons_captions.add(self.exitbtn.textSprite)
         self.buttons.add(self.startbtn)
         self.buttons.add(self.exitbtn)
+        self.window.blit(self.background, (0, 0))
         
     def draw(self):
-        self.window.blit(self.background, (0, 0))        
+        self.buttons.clear(self.window, self.background)
         self.buttons.draw(self.window)
         self.buttons_captions.draw(self.window)
     def event(self,event):
@@ -74,6 +75,7 @@ class GameLocation(Location):
         self.score_sprite = TextSprite(50,25,self.doodle.name, 45, (0,0,0))
         self.allsprites.add(self.score_sprite)
         self.header = Header()
+        self.window.blit(self.background, (0, 0))
     
     
     def randomPlatform(self, x , y):
@@ -86,9 +88,8 @@ class GameLocation(Location):
             return Platform(x,y)
     
     def draw(self):
-        self.window.blit(self.background, (0, 0))
         if self.doodle.alive == 1:
-
+            self.allsprites.clear(self.window, self.background)
             # doodler jumps
             mousePos = pygame.mouse.get_pos()
             self.doodle.incYSpeed(-self.gravitation)
