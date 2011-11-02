@@ -41,12 +41,12 @@ class Doodle(Sprite):
     alive = 1
     ySpeed = 5
     x = 240
-    y = 500
+    y = 350
     def __init__(self, name):
         pygame.sprite.Sprite.__init__(self)
         self.name = name
-        self.img_r = pygame.image.load('img/doodle_r.png').convert()
-        self.img_l = pygame.image.load('img/doodle_l.png').convert()
+        self.img_r = pygame.image.load('img/doodle.png').convert()
+        self.img_l = pygame.transform.flip(self.img_r, True, False) 
         self.image = self.img_r
         self.image.set_colorkey(self.image.get_at((0,0)), RLEACCEL)
         self.rect = self.image.get_rect()
@@ -106,7 +106,8 @@ class Platform(Sprite):
     
     def renew(self):
         self.setX(randint(10, 470))
-        self.setY(randint(-50, -30) + randint(0, 30))
+        self.setY(randint(-50, -30) + randint(0, 40))
+        self =  MovingPlatform(self.x, self.y)
         
 
 class MovingPlatform(Platform):
@@ -114,11 +115,11 @@ class MovingPlatform(Platform):
         Platform.__init__(self, x, y)
         self.initImg('img/blueplatform.png')    
         self.way = -1 # 1 or -1 platform way
-        self.xSpeed = 5
+        self.xSpeed = randint(2, 6)
 
     def move(self):
         self.moveX(self.xSpeed*self.way)
-        if self.x < 20 or self.x > 460:
+        if  10 < self.x < 19 or 460 < self.x < 469:
             self.way = - self.way
     
 class CrashingPlatform(Platform):
@@ -171,14 +172,13 @@ class Button(Sprite):
         self.rect = self.image.get_rect()
         self.rect.center = (self.x,self.y)
         
-class Header(pygame.Surface):
-    def __init__(self):
-        pygame.Surface.__init__(self,(480,50), pygame.SRCALPHA)
-        self.fill((0,191,255,128))
+class Rectangle(pygame.Surface):
+    def __init__(self, width, heigth,color):
+        pygame.Surface.__init__(self,(width, heigth), pygame.SRCALPHA)
+        self.fill(color)
         
         
 class TextSprite(Sprite):
- 
     def __init__(self, x, y, text='', size=35, color=(255, 255, 255)):
         pygame.sprite.Sprite.__init__(self)
         self.x = x
@@ -202,3 +202,5 @@ class TextSprite(Sprite):
         self.image = self.font.render(self.text, True, self.color)
         self.rect = self.image.get_rect()
         self.rect.center = (self.x, self.y)
+        
+        

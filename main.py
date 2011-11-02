@@ -38,7 +38,7 @@ def main():
 
     clock = pygame.time.Clock()
     while 1:
-        clock.tick(60)
+        clock.tick(45)
         game.location.draw()
         pygame.display.flip()
         for event in pygame.event.get():
