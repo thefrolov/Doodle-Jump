@@ -2,3 +2,21 @@ Wonderful Doodle Jump game clone
 
 Needs python, pygame
 
+
+TODO:
+
+1. Redisign StartLocation:
+    a) new input box;
+    b) stat button;
+2. Game play modifications:
+    a) Physics
+    b) Add bonuses:
+        - spring
+        - rocket
+        - shield
+        - impeller
+    c) Add one monster. (Yet)
+3. Exit modifications:
+    a) Show stats
+    b) Restart game
+    c) Tweet results (may be)
