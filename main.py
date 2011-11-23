@@ -8,14 +8,15 @@ import sys
 from locations import *
 from sprites import *
 
+from config import screen_width, screen_height, fps
+
 
 # Main class for game window
 class Game():
-    level = 0
 
     def __init__(self):
         pygame.init()
-        window = pygame.display.set_mode((480, 640))
+        window = pygame.display.set_mode((screen_width, screen_height))
         pygame.display.set_caption('Doodle jump')
     def event(self, event):
         if event.type == QUIT:
@@ -34,11 +35,12 @@ def main():
 
     start_location = StartLocation(game)
 
-    game.location = start_location
+    #game.location = start_location
+    game.location = GameLocation(game,'Т0стер')
 
     clock = pygame.time.Clock()
     while 1:
-        clock.tick(45)
+        clock.tick(fps)
         game.location.draw()
         pygame.display.flip()
         for event in pygame.event.get():

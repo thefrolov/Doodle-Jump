@@ -4,35 +4,42 @@ import pygame
 from pygame.locals import *
 from random import randint
 
+from config import *
 # Base class for sprites
 class Sprite(pygame.sprite.Sprite):
-    
-    x = 0
-    y = 0
     
     def __init__(self, x = 0, y = 0):
         pygame.sprite.Sprite.__init__(self)
         self.x = x
         self.y = y
         
-    def moveX(self, x):
+    def move_x(self, x):
         self.x = self.x + x
         self._move()
     
-    def moveY(self, y):
+    def move_y(self, y):
         self.y = self.y + y
         self._move()
         
-    def setX(self, x):
+    def set_x(self, x):
         self.x = x
         self._move()
     
-    def setY(self, y):
+    def set_y(self, y):
         self.y = y
         self._move()
         
     def _move(self):
         self.rect.center = (self.x,self.y)
+
+
+    # Sprite image initialization
+    def init_image(self, imgPath):
+        self.image = pygame.image.load(imgPath).convert()
+        self.image.set_colorkey(self.image.get_at((0,0)), RLEACCEL)
+        self.rect = self.image.get_rect()
+        self.rect.center = (self.x,self.y)
+        
 
 # doodle sprite
 class Doodle(Sprite):
@@ -40,8 +47,8 @@ class Doodle(Sprite):
     score = 0
     alive = 1
     ySpeed = 5
-    x = 240
-    y = 350
+    x = doodle_start_position[0]
+    y = doodle_start_position[1]
     def __init__(self, name):
         pygame.sprite.Sprite.__init__(self)
         self.name = name
@@ -54,10 +61,10 @@ class Doodle(Sprite):
 
     def _move(self):
         self.rect.center = (self.x,self.y)
-        if self.y >=640:
+        if self.y >= screen_height:
             self.alive = 0     
     
-    def getLegsRect(self):
+    def get_legs_rect(self):
         left = self.rect.left + self.rect.width*0.1
         top = self.rect.top + self.rect.height*0.9
         width = self.rect.width*0.6
@@ -65,7 +72,7 @@ class Doodle(Sprite):
         return pygame.Rect(left, top, width, height)
 		
     
-    def setX(self, x):
+    def set_x(self, x):
         if x < self.x:
             self.image = self.img_l
         elif x > self.x:
@@ -75,24 +82,17 @@ class Doodle(Sprite):
         self.rect = self.image.get_rect()
         self._move()
     
-    def incYSpeed(self, speed):
+    def inc_y_speed(self, speed):
         self.ySpeed = self.ySpeed + speed
     
-    def incScore(self, score):
+    def inc_score(self, score):
         self.score = self.score + score
         
 
 # base class for Platform
 class Platform(Sprite):
-    
-    # Sprite image initialization
-    def initImg(self, imgPath):
-        self.image = pygame.image.load(imgPath).convert()
-        self.image.set_colorkey(self.image.get_at((0,0)), RLEACCEL)
-        self.rect = self.image.get_rect()
-        self.rect.center = (self.x,self.y)
-        
-    def getSurfaceRect(self):
+
+    def get_surface_rect(self):
         left = self.rect.left
         top = self.rect.top
         width = self.rect.width
@@ -102,35 +102,38 @@ class Platform(Sprite):
     def __init__(self, x, y):
         Sprite.__init__(self, x, y)
         if type(self).__name__ == "Platform":
-            self.initImg('img/greenplatform.png')
+            self.init_image('img/greenplatform.png')
+            self.spring = Spring(self.x+30, self.y-20)
     
     def renew(self):
-        self.setX(randint(10, 470))
-        self.setY(randint(-50, -30) + randint(0, 40))
+        self.set_x(randint(10, 470))
+        self.set_y(randint(-50, -30) + randint(0, 40))
         self =  MovingPlatform(self.x, self.y)
         
 
 class MovingPlatform(Platform):
     def __init__(self, x, y):
         Platform.__init__(self, x, y)
-        self.initImg('img/blueplatform.png')    
+        self.init_image('img/blueplatform.png')    
         self.way = -1 # 1 or -1 platform way
         self.xSpeed = randint(2, 6)
+        self.spring = None
 
     def move(self):
-        self.moveX(self.xSpeed*self.way)
+        self.move_x(self.xSpeed*self.way)
         if  10 < self.x < 19 or 460 < self.x < 469:
             self.way = - self.way
     
 class CrashingPlatform(Platform):
     def __init__(self, x, y):
         Platform.__init__(self, x, y)
-        self.initImg('img/brownplatform.png')
+        self.init_image('img/brownplatform.png')
         self.ySpeed = 10
         self.crashed = 0
+        self.spring = None
     
     def crash(self):
-        self.initImg('img/brownplatformbr.png')
+        self.init_image('img/brownplatformbr.png')
         self.crashed = 1
     
     def move(self):
@@ -138,14 +141,32 @@ class CrashingPlatform(Platform):
             pass
         
         elif self.crashed == 1:
-            self.moveY(self.ySpeed)
+            self.move_y(self.ySpeed)
     def renew(self):
         Platform.renew(self)
-        #self.setX(randint(10, 470))
-        #self.setY(randint(-50, -30) + randint(0, 30))
-        self.initImg('img/brownplatform.png')
+        self.init_image('img/brownplatform.png')
         self.crashed = 0
         
+class Spring(Sprite):
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+        compressed = 0
+        pygame.sprite.Sprite.__init__(self)
+
+        self.init_image('img/spring.png')
+
+    def compress(self):
+        self.init_image('img/spring_comp.png')
+        self.compressed = 1
+    
+    def get_top_surface(self):
+        left = self.rect.left
+        top = self.rect.top
+        width = self.rect.width
+        height = self.rect.height*0.1
+        return pygame.Rect(left, top, width, height)
+            
 
 class Button(Sprite):
     x = 0
