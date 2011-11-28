@@ -103,12 +103,11 @@ class Platform(Sprite):
         Sprite.__init__(self, x, y)
         if type(self).__name__ == "Platform":
             self.init_image('img/greenplatform.png')
-            self.spring = Spring(self.x+30, self.y-20)
-    
-    def renew(self):
-        self.set_x(randint(10, 470))
-        self.set_y(randint(-50, -30) + randint(0, 40))
-        self =  MovingPlatform(self.x, self.y)
+            rnd = randint(-100, 100)
+            if rnd >= 0:
+                self.spring = Spring(self.x+randint(-int(platform_width/2 - 10), int(platform_width/2) - 10), self.y-20)
+            else:
+                self.spring = None
         
 
 class MovingPlatform(Platform):

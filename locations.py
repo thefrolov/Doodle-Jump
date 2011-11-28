@@ -93,24 +93,23 @@ class GameLocation(Location):
     
     
     def randomPlatform(self,top = True):
-        x = randint(-20, 450)
-        bad_y = []
-        for spr in self.allsprites:
-            bad_y.append((spr.y-20, spr.y+20))
-    
-        good = 0
-        while good == 0:
-            if top:
-                y = randint(-50, 50)
-            else:
-                y = randint(0, screen_height)
-            good = 1
-            for bad_y_item in bad_y:
-                if bad_y_item[0] <= y <= bad_y_item[1]:
-                    good = 0
-                    break
+        x = randint(-0, screen_width - platform_width)
+#         bad_y = []
+#         for spr in self.allsprites:
+#             bad_y.append((spr.y-platform_y_padding, spr.y + platform_y_padding + spr.rect.height))
+#         
+#         good = 0
+#         while not good:
+        if top:
+           y = randint(-50, 50)
+        else:
+            y = randint(0, screen_height)
+#             good = 1
+#             for bad_y_item in bad_y:
+#                 if bad_y_item[0] <= y <= bad_y_item[1]:
+#                     good = 0
+#                     break
             
-    
         dig = randint(0, 100)
         if dig < 35:
             return MovingPlatform(x,y)
