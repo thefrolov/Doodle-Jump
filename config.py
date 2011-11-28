@@ -9,7 +9,7 @@ fps = 45
 doodle_start_position = [240,350]
 
 horizont = 300
-mouse_enabled = True
+mouse_enabled = False
 transparent_walls = True
 
 platform_count = 15

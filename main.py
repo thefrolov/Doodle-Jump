@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import pygame
+from pygame import _view
 from pygame.locals import *
 import sys
 

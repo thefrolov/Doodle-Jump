@@ -3,6 +3,9 @@ Wonderful Doodle Jump game clone
 Needs python, pygame
 
 
+IMPORTANT! Copy img directory to dist folder with main.exe for run it under window$.
+
+
 TODO:
 
 1. Redisign StartLocation:
@@ -11,11 +14,8 @@ TODO:
 2. Game play modifications:
     a) Physics
     b) Add bonuses:
-<<<<<<< HEAD
         - spring DONE
-=======
         - spring
->>>>>>> 32855811b213f004edc032e02293c441a9630fa1
         - rocket
         - shield
         - impeller
@@ -23,8 +23,4 @@ TODO:
 3. Exit modifications:
     a) Show stats
     b) Restart game
-<<<<<<< HEAD
     c) Tweet results (may be)
-=======
-    c) Tweet results (may be)
->>>>>>> 32855811b213f004edc032e02293c441a9630fa1
