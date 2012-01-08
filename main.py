@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import pygame
+# _view for exe building
 #from pygame import _view
 from pygame.locals import *
 import sys
