@@ -1,0 +1,1330 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module sprites</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>sprites</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/sebastian/dev/Doodle-Jump/sprites.py">/home/sebastian/dev/Doodle-Jump/sprites.py</a></font></td></tr></table>
+    <p><tt>Module&nbsp;Sprites</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="pygame.color.html">pygame.color</a><br>
+</td><td width="25%" valign=top><a href="pygame.html">pygame</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="pygame.html#Surface">pygame.Surface</a>(<a href="__builtin__.html#object">__builtin__.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="sprites.html#Rectangle">Rectangle</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>(<a href="__builtin__.html#object">__builtin__.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="sprites.html#Sprite">Sprite</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="sprites.html#Button">Button</a>
+</font></dt><dt><font face="helvetica, arial"><a href="sprites.html#Doodle">Doodle</a>
+</font></dt><dt><font face="helvetica, arial"><a href="sprites.html#Monster">Monster</a>
+</font></dt><dt><font face="helvetica, arial"><a href="sprites.html#Platform">Platform</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="sprites.html#CrashingPlatform">CrashingPlatform</a>
+</font></dt><dt><font face="helvetica, arial"><a href="sprites.html#MovingPlatform">MovingPlatform</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="sprites.html#Spring">Spring</a>
+</font></dt><dt><font face="helvetica, arial"><a href="sprites.html#TextSprite">TextSprite</a>
+</font></dt></dl>
+</dd>
+</dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Button">class <strong>Button</strong></a>(<a href="sprites.html#Sprite">Sprite</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="sprites.html#Button">Button</a></dd>
+<dd><a href="sprites.html#Sprite">Sprite</a></dd>
+<dd><a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Button-__init__"><strong>__init__</strong></a>(self, x, y, text)</dt></dl>
+
+<dl><dt><a name="Button-changeState"><strong>changeState</strong></a>(self, state)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>x</strong> = 0</dl>
+
+<dl><dt><strong>y</strong> = 0</dl>
+
+<hr>
+Methods inherited from <a href="sprites.html#Sprite">Sprite</a>:<br>
+<dl><dt><a name="Button-init_image"><strong>init_image</strong></a>(self, imgPath)</dt><dd><tt>#&nbsp;<a href="#Sprite">Sprite</a>&nbsp;image&nbsp;initialization</tt></dd></dl>
+
+<dl><dt><a name="Button-move_x"><strong>move_x</strong></a>(self, x)</dt></dl>
+
+<dl><dt><a name="Button-move_y"><strong>move_y</strong></a>(self, y)</dt></dl>
+
+<dl><dt><a name="Button-set_x"><strong>set_x</strong></a>(self, x)</dt></dl>
+
+<dl><dt><a name="Button-set_y"><strong>set_y</strong></a>(self, y)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><a name="Button-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Button-add"><strong>add</strong></a>(self, *groups)</dt><dd><tt>add&nbsp;the&nbsp;sprite&nbsp;to&nbsp;groups<br>
+<a href="#Sprite">Sprite</a>.<a href="#Button-add">add</a>(*groups):&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+Any&nbsp;number&nbsp;of&nbsp;Group&nbsp;instances&nbsp;can&nbsp;be&nbsp;passed&nbsp;as&nbsp;arguments.&nbsp;The&nbsp;<br>
+<a href="#Sprite">Sprite</a>&nbsp;will&nbsp;be&nbsp;added&nbsp;to&nbsp;the&nbsp;Groups&nbsp;it&nbsp;is&nbsp;not&nbsp;already&nbsp;a&nbsp;member&nbsp;of.</tt></dd></dl>
+
+<dl><dt><a name="Button-add_internal"><strong>add_internal</strong></a>(self, group)</dt></dl>
+
+<dl><dt><a name="Button-alive"><strong>alive</strong></a>(self)</dt><dd><tt>does&nbsp;the&nbsp;sprite&nbsp;belong&nbsp;to&nbsp;any&nbsp;groups<br>
+<a href="#Sprite">Sprite</a>.<a href="#Button-alive">alive</a>():&nbsp;return&nbsp;bool<br>
+&nbsp;<br>
+Returns&nbsp;True&nbsp;when&nbsp;the&nbsp;<a href="#Sprite">Sprite</a>&nbsp;belongs&nbsp;to&nbsp;one&nbsp;or&nbsp;more&nbsp;Groups.</tt></dd></dl>
+
+<dl><dt><a name="Button-groups"><strong>groups</strong></a>(self)</dt><dd><tt>list&nbsp;of&nbsp;Groups&nbsp;that&nbsp;contain&nbsp;this&nbsp;<a href="#Sprite">Sprite</a><br>
+<a href="#Sprite">Sprite</a>.<a href="#Button-groups">groups</a>():&nbsp;return&nbsp;group_list<br>
+&nbsp;<br>
+Return&nbsp;a&nbsp;list&nbsp;of&nbsp;all&nbsp;the&nbsp;Groups&nbsp;that&nbsp;contain&nbsp;this&nbsp;<a href="#Sprite">Sprite</a>.</tt></dd></dl>
+
+<dl><dt><a name="Button-kill"><strong>kill</strong></a>(self)</dt><dd><tt>remove&nbsp;the&nbsp;<a href="#Sprite">Sprite</a>&nbsp;from&nbsp;all&nbsp;Groups<br>
+<a href="#Sprite">Sprite</a>.<a href="#Button-kill">kill</a>():&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+The&nbsp;<a href="#Sprite">Sprite</a>&nbsp;is&nbsp;removed&nbsp;from&nbsp;all&nbsp;the&nbsp;Groups&nbsp;that&nbsp;contain&nbsp;it.&nbsp;This&nbsp;won't<br>
+change&nbsp;anything&nbsp;about&nbsp;the&nbsp;state&nbsp;of&nbsp;the&nbsp;<a href="#Sprite">Sprite</a>.&nbsp;It&nbsp;is&nbsp;possible&nbsp;to&nbsp;continue<br>
+to&nbsp;use&nbsp;the&nbsp;<a href="#Sprite">Sprite</a>&nbsp;after&nbsp;this&nbsp;method&nbsp;has&nbsp;been&nbsp;called,&nbsp;including&nbsp;adding&nbsp;it<br>
+to&nbsp;Groups.</tt></dd></dl>
+
+<dl><dt><a name="Button-remove"><strong>remove</strong></a>(self, *groups)</dt><dd><tt>remove&nbsp;the&nbsp;sprite&nbsp;from&nbsp;groups<br>
+<a href="#Sprite">Sprite</a>.<a href="#Button-remove">remove</a>(*groups):&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+Any&nbsp;number&nbsp;of&nbsp;Group&nbsp;instances&nbsp;can&nbsp;be&nbsp;passed&nbsp;as&nbsp;arguments.&nbsp;The&nbsp;<a href="#Sprite">Sprite</a>&nbsp;will<br>
+be&nbsp;removed&nbsp;from&nbsp;the&nbsp;Groups&nbsp;it&nbsp;is&nbsp;currently&nbsp;a&nbsp;member&nbsp;of.</tt></dd></dl>
+
+<dl><dt><a name="Button-remove_internal"><strong>remove_internal</strong></a>(self, group)</dt></dl>
+
+<dl><dt><a name="Button-update"><strong>update</strong></a>(self, *args)</dt><dd><tt>method&nbsp;to&nbsp;control&nbsp;sprite&nbsp;behavior<br>
+<a href="#Sprite">Sprite</a>.<a href="#Button-update">update</a>(*args):<br>
+&nbsp;<br>
+The&nbsp;default&nbsp;implementation&nbsp;of&nbsp;this&nbsp;method&nbsp;does&nbsp;nothing;&nbsp;it's&nbsp;just&nbsp;a<br>
+convenient&nbsp;"hook"&nbsp;that&nbsp;you&nbsp;can&nbsp;override.&nbsp;This&nbsp;method&nbsp;is&nbsp;called&nbsp;by<br>
+Group.<a href="#Button-update">update</a>()&nbsp;with&nbsp;whatever&nbsp;arguments&nbsp;you&nbsp;give&nbsp;it.<br>
+&nbsp;<br>
+There&nbsp;is&nbsp;no&nbsp;need&nbsp;to&nbsp;use&nbsp;this&nbsp;method&nbsp;if&nbsp;not&nbsp;using&nbsp;the&nbsp;convenience&nbsp;<br>
+method&nbsp;by&nbsp;the&nbsp;same&nbsp;name&nbsp;in&nbsp;the&nbsp;Group&nbsp;class.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="CrashingPlatform">class <strong>CrashingPlatform</strong></a>(<a href="sprites.html#Platform">Platform</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="sprites.html#CrashingPlatform">CrashingPlatform</a></dd>
+<dd><a href="sprites.html#Platform">Platform</a></dd>
+<dd><a href="sprites.html#Sprite">Sprite</a></dd>
+<dd><a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="CrashingPlatform-__init__"><strong>__init__</strong></a>(self, x, y)</dt></dl>
+
+<dl><dt><a name="CrashingPlatform-crash"><strong>crash</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="CrashingPlatform-move"><strong>move</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="CrashingPlatform-renew"><strong>renew</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="sprites.html#Platform">Platform</a>:<br>
+<dl><dt><a name="CrashingPlatform-get_surface_rect"><strong>get_surface_rect</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="sprites.html#Sprite">Sprite</a>:<br>
+<dl><dt><a name="CrashingPlatform-init_image"><strong>init_image</strong></a>(self, imgPath)</dt><dd><tt>#&nbsp;<a href="#Sprite">Sprite</a>&nbsp;image&nbsp;initialization</tt></dd></dl>
+
+<dl><dt><a name="CrashingPlatform-move_x"><strong>move_x</strong></a>(self, x)</dt></dl>
+
+<dl><dt><a name="CrashingPlatform-move_y"><strong>move_y</strong></a>(self, y)</dt></dl>
+
+<dl><dt><a name="CrashingPlatform-set_x"><strong>set_x</strong></a>(self, x)</dt></dl>
+
+<dl><dt><a name="CrashingPlatform-set_y"><strong>set_y</strong></a>(self, y)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><a name="CrashingPlatform-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="CrashingPlatform-add"><strong>add</strong></a>(self, *groups)</dt><dd><tt>add&nbsp;the&nbsp;sprite&nbsp;to&nbsp;groups<br>
+<a href="#Sprite">Sprite</a>.<a href="#CrashingPlatform-add">add</a>(*groups):&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+Any&nbsp;number&nbsp;of&nbsp;Group&nbsp;instances&nbsp;can&nbsp;be&nbsp;passed&nbsp;as&nbsp;arguments.&nbsp;The&nbsp;<br>
+<a href="#Sprite">Sprite</a>&nbsp;will&nbsp;be&nbsp;added&nbsp;to&nbsp;the&nbsp;Groups&nbsp;it&nbsp;is&nbsp;not&nbsp;already&nbsp;a&nbsp;member&nbsp;of.</tt></dd></dl>
+
+<dl><dt><a name="CrashingPlatform-add_internal"><strong>add_internal</strong></a>(self, group)</dt></dl>
+
+<dl><dt><a name="CrashingPlatform-alive"><strong>alive</strong></a>(self)</dt><dd><tt>does&nbsp;the&nbsp;sprite&nbsp;belong&nbsp;to&nbsp;any&nbsp;groups<br>
+<a href="#Sprite">Sprite</a>.<a href="#CrashingPlatform-alive">alive</a>():&nbsp;return&nbsp;bool<br>
+&nbsp;<br>
+Returns&nbsp;True&nbsp;when&nbsp;the&nbsp;<a href="#Sprite">Sprite</a>&nbsp;belongs&nbsp;to&nbsp;one&nbsp;or&nbsp;more&nbsp;Groups.</tt></dd></dl>
+
+<dl><dt><a name="CrashingPlatform-groups"><strong>groups</strong></a>(self)</dt><dd><tt>list&nbsp;of&nbsp;Groups&nbsp;that&nbsp;contain&nbsp;this&nbsp;<a href="#Sprite">Sprite</a><br>
+<a href="#Sprite">Sprite</a>.<a href="#CrashingPlatform-groups">groups</a>():&nbsp;return&nbsp;group_list<br>
+&nbsp;<br>
+Return&nbsp;a&nbsp;list&nbsp;of&nbsp;all&nbsp;the&nbsp;Groups&nbsp;that&nbsp;contain&nbsp;this&nbsp;<a href="#Sprite">Sprite</a>.</tt></dd></dl>
+
+<dl><dt><a name="CrashingPlatform-kill"><strong>kill</strong></a>(self)</dt><dd><tt>remove&nbsp;the&nbsp;<a href="#Sprite">Sprite</a>&nbsp;from&nbsp;all&nbsp;Groups<br>
+<a href="#Sprite">Sprite</a>.<a href="#CrashingPlatform-kill">kill</a>():&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+The&nbsp;<a href="#Sprite">Sprite</a>&nbsp;is&nbsp;removed&nbsp;from&nbsp;all&nbsp;the&nbsp;Groups&nbsp;that&nbsp;contain&nbsp;it.&nbsp;This&nbsp;won't<br>
+change&nbsp;anything&nbsp;about&nbsp;the&nbsp;state&nbsp;of&nbsp;the&nbsp;<a href="#Sprite">Sprite</a>.&nbsp;It&nbsp;is&nbsp;possible&nbsp;to&nbsp;continue<br>
+to&nbsp;use&nbsp;the&nbsp;<a href="#Sprite">Sprite</a>&nbsp;after&nbsp;this&nbsp;method&nbsp;has&nbsp;been&nbsp;called,&nbsp;including&nbsp;adding&nbsp;it<br>
+to&nbsp;Groups.</tt></dd></dl>
+
+<dl><dt><a name="CrashingPlatform-remove"><strong>remove</strong></a>(self, *groups)</dt><dd><tt>remove&nbsp;the&nbsp;sprite&nbsp;from&nbsp;groups<br>
+<a href="#Sprite">Sprite</a>.<a href="#CrashingPlatform-remove">remove</a>(*groups):&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+Any&nbsp;number&nbsp;of&nbsp;Group&nbsp;instances&nbsp;can&nbsp;be&nbsp;passed&nbsp;as&nbsp;arguments.&nbsp;The&nbsp;<a href="#Sprite">Sprite</a>&nbsp;will<br>
+be&nbsp;removed&nbsp;from&nbsp;the&nbsp;Groups&nbsp;it&nbsp;is&nbsp;currently&nbsp;a&nbsp;member&nbsp;of.</tt></dd></dl>
+
+<dl><dt><a name="CrashingPlatform-remove_internal"><strong>remove_internal</strong></a>(self, group)</dt></dl>
+
+<dl><dt><a name="CrashingPlatform-update"><strong>update</strong></a>(self, *args)</dt><dd><tt>method&nbsp;to&nbsp;control&nbsp;sprite&nbsp;behavior<br>
+<a href="#Sprite">Sprite</a>.<a href="#CrashingPlatform-update">update</a>(*args):<br>
+&nbsp;<br>
+The&nbsp;default&nbsp;implementation&nbsp;of&nbsp;this&nbsp;method&nbsp;does&nbsp;nothing;&nbsp;it's&nbsp;just&nbsp;a<br>
+convenient&nbsp;"hook"&nbsp;that&nbsp;you&nbsp;can&nbsp;override.&nbsp;This&nbsp;method&nbsp;is&nbsp;called&nbsp;by<br>
+Group.<a href="#CrashingPlatform-update">update</a>()&nbsp;with&nbsp;whatever&nbsp;arguments&nbsp;you&nbsp;give&nbsp;it.<br>
+&nbsp;<br>
+There&nbsp;is&nbsp;no&nbsp;need&nbsp;to&nbsp;use&nbsp;this&nbsp;method&nbsp;if&nbsp;not&nbsp;using&nbsp;the&nbsp;convenience&nbsp;<br>
+method&nbsp;by&nbsp;the&nbsp;same&nbsp;name&nbsp;in&nbsp;the&nbsp;Group&nbsp;class.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Doodle">class <strong>Doodle</strong></a>(<a href="sprites.html#Sprite">Sprite</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#&nbsp;doodle&nbsp;sprite<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="sprites.html#Doodle">Doodle</a></dd>
+<dd><a href="sprites.html#Sprite">Sprite</a></dd>
+<dd><a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Doodle-__init__"><strong>__init__</strong></a>(self, name)</dt></dl>
+
+<dl><dt><a name="Doodle-get_legs_rect"><strong>get_legs_rect</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Doodle-inc_score"><strong>inc_score</strong></a>(self, score)</dt></dl>
+
+<dl><dt><a name="Doodle-inc_y_speed"><strong>inc_y_speed</strong></a>(self, speed)</dt></dl>
+
+<dl><dt><a name="Doodle-set_x"><strong>set_x</strong></a>(self, x)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>alive</strong> = 1</dl>
+
+<dl><dt><strong>name</strong> = 'Anonymus'</dl>
+
+<dl><dt><strong>score</strong> = 0</dl>
+
+<dl><dt><strong>x</strong> = 240</dl>
+
+<dl><dt><strong>y</strong> = 350</dl>
+
+<dl><dt><strong>ySpeed</strong> = 5</dl>
+
+<hr>
+Methods inherited from <a href="sprites.html#Sprite">Sprite</a>:<br>
+<dl><dt><a name="Doodle-init_image"><strong>init_image</strong></a>(self, imgPath)</dt><dd><tt>#&nbsp;<a href="#Sprite">Sprite</a>&nbsp;image&nbsp;initialization</tt></dd></dl>
+
+<dl><dt><a name="Doodle-move_x"><strong>move_x</strong></a>(self, x)</dt></dl>
+
+<dl><dt><a name="Doodle-move_y"><strong>move_y</strong></a>(self, y)</dt></dl>
+
+<dl><dt><a name="Doodle-set_y"><strong>set_y</strong></a>(self, y)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><a name="Doodle-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Doodle-add"><strong>add</strong></a>(self, *groups)</dt><dd><tt>add&nbsp;the&nbsp;sprite&nbsp;to&nbsp;groups<br>
+<a href="#Sprite">Sprite</a>.<a href="#Doodle-add">add</a>(*groups):&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+Any&nbsp;number&nbsp;of&nbsp;Group&nbsp;instances&nbsp;can&nbsp;be&nbsp;passed&nbsp;as&nbsp;arguments.&nbsp;The&nbsp;<br>
+<a href="#Sprite">Sprite</a>&nbsp;will&nbsp;be&nbsp;added&nbsp;to&nbsp;the&nbsp;Groups&nbsp;it&nbsp;is&nbsp;not&nbsp;already&nbsp;a&nbsp;member&nbsp;of.</tt></dd></dl>
+
+<dl><dt><a name="Doodle-add_internal"><strong>add_internal</strong></a>(self, group)</dt></dl>
+
+<dl><dt><a name="Doodle-groups"><strong>groups</strong></a>(self)</dt><dd><tt>list&nbsp;of&nbsp;Groups&nbsp;that&nbsp;contain&nbsp;this&nbsp;<a href="#Sprite">Sprite</a><br>
+<a href="#Sprite">Sprite</a>.<a href="#Doodle-groups">groups</a>():&nbsp;return&nbsp;group_list<br>
+&nbsp;<br>
+Return&nbsp;a&nbsp;list&nbsp;of&nbsp;all&nbsp;the&nbsp;Groups&nbsp;that&nbsp;contain&nbsp;this&nbsp;<a href="#Sprite">Sprite</a>.</tt></dd></dl>
+
+<dl><dt><a name="Doodle-kill"><strong>kill</strong></a>(self)</dt><dd><tt>remove&nbsp;the&nbsp;<a href="#Sprite">Sprite</a>&nbsp;from&nbsp;all&nbsp;Groups<br>
+<a href="#Sprite">Sprite</a>.<a href="#Doodle-kill">kill</a>():&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+The&nbsp;<a href="#Sprite">Sprite</a>&nbsp;is&nbsp;removed&nbsp;from&nbsp;all&nbsp;the&nbsp;Groups&nbsp;that&nbsp;contain&nbsp;it.&nbsp;This&nbsp;won't<br>
+change&nbsp;anything&nbsp;about&nbsp;the&nbsp;state&nbsp;of&nbsp;the&nbsp;<a href="#Sprite">Sprite</a>.&nbsp;It&nbsp;is&nbsp;possible&nbsp;to&nbsp;continue<br>
+to&nbsp;use&nbsp;the&nbsp;<a href="#Sprite">Sprite</a>&nbsp;after&nbsp;this&nbsp;method&nbsp;has&nbsp;been&nbsp;called,&nbsp;including&nbsp;adding&nbsp;it<br>
+to&nbsp;Groups.</tt></dd></dl>
+
+<dl><dt><a name="Doodle-remove"><strong>remove</strong></a>(self, *groups)</dt><dd><tt>remove&nbsp;the&nbsp;sprite&nbsp;from&nbsp;groups<br>
+<a href="#Sprite">Sprite</a>.<a href="#Doodle-remove">remove</a>(*groups):&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+Any&nbsp;number&nbsp;of&nbsp;Group&nbsp;instances&nbsp;can&nbsp;be&nbsp;passed&nbsp;as&nbsp;arguments.&nbsp;The&nbsp;<a href="#Sprite">Sprite</a>&nbsp;will<br>
+be&nbsp;removed&nbsp;from&nbsp;the&nbsp;Groups&nbsp;it&nbsp;is&nbsp;currently&nbsp;a&nbsp;member&nbsp;of.</tt></dd></dl>
+
+<dl><dt><a name="Doodle-remove_internal"><strong>remove_internal</strong></a>(self, group)</dt></dl>
+
+<dl><dt><a name="Doodle-update"><strong>update</strong></a>(self, *args)</dt><dd><tt>method&nbsp;to&nbsp;control&nbsp;sprite&nbsp;behavior<br>
+<a href="#Sprite">Sprite</a>.<a href="#Doodle-update">update</a>(*args):<br>
+&nbsp;<br>
+The&nbsp;default&nbsp;implementation&nbsp;of&nbsp;this&nbsp;method&nbsp;does&nbsp;nothing;&nbsp;it's&nbsp;just&nbsp;a<br>
+convenient&nbsp;"hook"&nbsp;that&nbsp;you&nbsp;can&nbsp;override.&nbsp;This&nbsp;method&nbsp;is&nbsp;called&nbsp;by<br>
+Group.<a href="#Doodle-update">update</a>()&nbsp;with&nbsp;whatever&nbsp;arguments&nbsp;you&nbsp;give&nbsp;it.<br>
+&nbsp;<br>
+There&nbsp;is&nbsp;no&nbsp;need&nbsp;to&nbsp;use&nbsp;this&nbsp;method&nbsp;if&nbsp;not&nbsp;using&nbsp;the&nbsp;convenience&nbsp;<br>
+method&nbsp;by&nbsp;the&nbsp;same&nbsp;name&nbsp;in&nbsp;the&nbsp;Group&nbsp;class.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Monster">class <strong>Monster</strong></a>(<a href="sprites.html#Sprite">Sprite</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="sprites.html#Monster">Monster</a></dd>
+<dd><a href="sprites.html#Sprite">Sprite</a></dd>
+<dd><a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Monster-__init__"><strong>__init__</strong></a>(self, x, y)</dt></dl>
+
+<dl><dt><a name="Monster-move"><strong>move</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="sprites.html#Sprite">Sprite</a>:<br>
+<dl><dt><a name="Monster-init_image"><strong>init_image</strong></a>(self, imgPath)</dt><dd><tt>#&nbsp;<a href="#Sprite">Sprite</a>&nbsp;image&nbsp;initialization</tt></dd></dl>
+
+<dl><dt><a name="Monster-move_x"><strong>move_x</strong></a>(self, x)</dt></dl>
+
+<dl><dt><a name="Monster-move_y"><strong>move_y</strong></a>(self, y)</dt></dl>
+
+<dl><dt><a name="Monster-set_x"><strong>set_x</strong></a>(self, x)</dt></dl>
+
+<dl><dt><a name="Monster-set_y"><strong>set_y</strong></a>(self, y)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><a name="Monster-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Monster-add"><strong>add</strong></a>(self, *groups)</dt><dd><tt>add&nbsp;the&nbsp;sprite&nbsp;to&nbsp;groups<br>
+<a href="#Sprite">Sprite</a>.<a href="#Monster-add">add</a>(*groups):&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+Any&nbsp;number&nbsp;of&nbsp;Group&nbsp;instances&nbsp;can&nbsp;be&nbsp;passed&nbsp;as&nbsp;arguments.&nbsp;The&nbsp;<br>
+<a href="#Sprite">Sprite</a>&nbsp;will&nbsp;be&nbsp;added&nbsp;to&nbsp;the&nbsp;Groups&nbsp;it&nbsp;is&nbsp;not&nbsp;already&nbsp;a&nbsp;member&nbsp;of.</tt></dd></dl>
+
+<dl><dt><a name="Monster-add_internal"><strong>add_internal</strong></a>(self, group)</dt></dl>
+
+<dl><dt><a name="Monster-alive"><strong>alive</strong></a>(self)</dt><dd><tt>does&nbsp;the&nbsp;sprite&nbsp;belong&nbsp;to&nbsp;any&nbsp;groups<br>
+<a href="#Sprite">Sprite</a>.<a href="#Monster-alive">alive</a>():&nbsp;return&nbsp;bool<br>
+&nbsp;<br>
+Returns&nbsp;True&nbsp;when&nbsp;the&nbsp;<a href="#Sprite">Sprite</a>&nbsp;belongs&nbsp;to&nbsp;one&nbsp;or&nbsp;more&nbsp;Groups.</tt></dd></dl>
+
+<dl><dt><a name="Monster-groups"><strong>groups</strong></a>(self)</dt><dd><tt>list&nbsp;of&nbsp;Groups&nbsp;that&nbsp;contain&nbsp;this&nbsp;<a href="#Sprite">Sprite</a><br>
+<a href="#Sprite">Sprite</a>.<a href="#Monster-groups">groups</a>():&nbsp;return&nbsp;group_list<br>
+&nbsp;<br>
+Return&nbsp;a&nbsp;list&nbsp;of&nbsp;all&nbsp;the&nbsp;Groups&nbsp;that&nbsp;contain&nbsp;this&nbsp;<a href="#Sprite">Sprite</a>.</tt></dd></dl>
+
+<dl><dt><a name="Monster-kill"><strong>kill</strong></a>(self)</dt><dd><tt>remove&nbsp;the&nbsp;<a href="#Sprite">Sprite</a>&nbsp;from&nbsp;all&nbsp;Groups<br>
+<a href="#Sprite">Sprite</a>.<a href="#Monster-kill">kill</a>():&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+The&nbsp;<a href="#Sprite">Sprite</a>&nbsp;is&nbsp;removed&nbsp;from&nbsp;all&nbsp;the&nbsp;Groups&nbsp;that&nbsp;contain&nbsp;it.&nbsp;This&nbsp;won't<br>
+change&nbsp;anything&nbsp;about&nbsp;the&nbsp;state&nbsp;of&nbsp;the&nbsp;<a href="#Sprite">Sprite</a>.&nbsp;It&nbsp;is&nbsp;possible&nbsp;to&nbsp;continue<br>
+to&nbsp;use&nbsp;the&nbsp;<a href="#Sprite">Sprite</a>&nbsp;after&nbsp;this&nbsp;method&nbsp;has&nbsp;been&nbsp;called,&nbsp;including&nbsp;adding&nbsp;it<br>
+to&nbsp;Groups.</tt></dd></dl>
+
+<dl><dt><a name="Monster-remove"><strong>remove</strong></a>(self, *groups)</dt><dd><tt>remove&nbsp;the&nbsp;sprite&nbsp;from&nbsp;groups<br>
+<a href="#Sprite">Sprite</a>.<a href="#Monster-remove">remove</a>(*groups):&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+Any&nbsp;number&nbsp;of&nbsp;Group&nbsp;instances&nbsp;can&nbsp;be&nbsp;passed&nbsp;as&nbsp;arguments.&nbsp;The&nbsp;<a href="#Sprite">Sprite</a>&nbsp;will<br>
+be&nbsp;removed&nbsp;from&nbsp;the&nbsp;Groups&nbsp;it&nbsp;is&nbsp;currently&nbsp;a&nbsp;member&nbsp;of.</tt></dd></dl>
+
+<dl><dt><a name="Monster-remove_internal"><strong>remove_internal</strong></a>(self, group)</dt></dl>
+
+<dl><dt><a name="Monster-update"><strong>update</strong></a>(self, *args)</dt><dd><tt>method&nbsp;to&nbsp;control&nbsp;sprite&nbsp;behavior<br>
+<a href="#Sprite">Sprite</a>.<a href="#Monster-update">update</a>(*args):<br>
+&nbsp;<br>
+The&nbsp;default&nbsp;implementation&nbsp;of&nbsp;this&nbsp;method&nbsp;does&nbsp;nothing;&nbsp;it's&nbsp;just&nbsp;a<br>
+convenient&nbsp;"hook"&nbsp;that&nbsp;you&nbsp;can&nbsp;override.&nbsp;This&nbsp;method&nbsp;is&nbsp;called&nbsp;by<br>
+Group.<a href="#Monster-update">update</a>()&nbsp;with&nbsp;whatever&nbsp;arguments&nbsp;you&nbsp;give&nbsp;it.<br>
+&nbsp;<br>
+There&nbsp;is&nbsp;no&nbsp;need&nbsp;to&nbsp;use&nbsp;this&nbsp;method&nbsp;if&nbsp;not&nbsp;using&nbsp;the&nbsp;convenience&nbsp;<br>
+method&nbsp;by&nbsp;the&nbsp;same&nbsp;name&nbsp;in&nbsp;the&nbsp;Group&nbsp;class.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="MovingPlatform">class <strong>MovingPlatform</strong></a>(<a href="sprites.html#Platform">Platform</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="sprites.html#MovingPlatform">MovingPlatform</a></dd>
+<dd><a href="sprites.html#Platform">Platform</a></dd>
+<dd><a href="sprites.html#Sprite">Sprite</a></dd>
+<dd><a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="MovingPlatform-__init__"><strong>__init__</strong></a>(self, x, y)</dt></dl>
+
+<dl><dt><a name="MovingPlatform-move"><strong>move</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="sprites.html#Platform">Platform</a>:<br>
+<dl><dt><a name="MovingPlatform-get_surface_rect"><strong>get_surface_rect</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="sprites.html#Sprite">Sprite</a>:<br>
+<dl><dt><a name="MovingPlatform-init_image"><strong>init_image</strong></a>(self, imgPath)</dt><dd><tt>#&nbsp;<a href="#Sprite">Sprite</a>&nbsp;image&nbsp;initialization</tt></dd></dl>
+
+<dl><dt><a name="MovingPlatform-move_x"><strong>move_x</strong></a>(self, x)</dt></dl>
+
+<dl><dt><a name="MovingPlatform-move_y"><strong>move_y</strong></a>(self, y)</dt></dl>
+
+<dl><dt><a name="MovingPlatform-set_x"><strong>set_x</strong></a>(self, x)</dt></dl>
+
+<dl><dt><a name="MovingPlatform-set_y"><strong>set_y</strong></a>(self, y)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><a name="MovingPlatform-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="MovingPlatform-add"><strong>add</strong></a>(self, *groups)</dt><dd><tt>add&nbsp;the&nbsp;sprite&nbsp;to&nbsp;groups<br>
+<a href="#Sprite">Sprite</a>.<a href="#MovingPlatform-add">add</a>(*groups):&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+Any&nbsp;number&nbsp;of&nbsp;Group&nbsp;instances&nbsp;can&nbsp;be&nbsp;passed&nbsp;as&nbsp;arguments.&nbsp;The&nbsp;<br>
+<a href="#Sprite">Sprite</a>&nbsp;will&nbsp;be&nbsp;added&nbsp;to&nbsp;the&nbsp;Groups&nbsp;it&nbsp;is&nbsp;not&nbsp;already&nbsp;a&nbsp;member&nbsp;of.</tt></dd></dl>
+
+<dl><dt><a name="MovingPlatform-add_internal"><strong>add_internal</strong></a>(self, group)</dt></dl>
+
+<dl><dt><a name="MovingPlatform-alive"><strong>alive</strong></a>(self)</dt><dd><tt>does&nbsp;the&nbsp;sprite&nbsp;belong&nbsp;to&nbsp;any&nbsp;groups<br>
+<a href="#Sprite">Sprite</a>.<a href="#MovingPlatform-alive">alive</a>():&nbsp;return&nbsp;bool<br>
+&nbsp;<br>
+Returns&nbsp;True&nbsp;when&nbsp;the&nbsp;<a href="#Sprite">Sprite</a>&nbsp;belongs&nbsp;to&nbsp;one&nbsp;or&nbsp;more&nbsp;Groups.</tt></dd></dl>
+
+<dl><dt><a name="MovingPlatform-groups"><strong>groups</strong></a>(self)</dt><dd><tt>list&nbsp;of&nbsp;Groups&nbsp;that&nbsp;contain&nbsp;this&nbsp;<a href="#Sprite">Sprite</a><br>
+<a href="#Sprite">Sprite</a>.<a href="#MovingPlatform-groups">groups</a>():&nbsp;return&nbsp;group_list<br>
+&nbsp;<br>
+Return&nbsp;a&nbsp;list&nbsp;of&nbsp;all&nbsp;the&nbsp;Groups&nbsp;that&nbsp;contain&nbsp;this&nbsp;<a href="#Sprite">Sprite</a>.</tt></dd></dl>
+
+<dl><dt><a name="MovingPlatform-kill"><strong>kill</strong></a>(self)</dt><dd><tt>remove&nbsp;the&nbsp;<a href="#Sprite">Sprite</a>&nbsp;from&nbsp;all&nbsp;Groups<br>
+<a href="#Sprite">Sprite</a>.<a href="#MovingPlatform-kill">kill</a>():&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+The&nbsp;<a href="#Sprite">Sprite</a>&nbsp;is&nbsp;removed&nbsp;from&nbsp;all&nbsp;the&nbsp;Groups&nbsp;that&nbsp;contain&nbsp;it.&nbsp;This&nbsp;won't<br>
+change&nbsp;anything&nbsp;about&nbsp;the&nbsp;state&nbsp;of&nbsp;the&nbsp;<a href="#Sprite">Sprite</a>.&nbsp;It&nbsp;is&nbsp;possible&nbsp;to&nbsp;continue<br>
+to&nbsp;use&nbsp;the&nbsp;<a href="#Sprite">Sprite</a>&nbsp;after&nbsp;this&nbsp;method&nbsp;has&nbsp;been&nbsp;called,&nbsp;including&nbsp;adding&nbsp;it<br>
+to&nbsp;Groups.</tt></dd></dl>
+
+<dl><dt><a name="MovingPlatform-remove"><strong>remove</strong></a>(self, *groups)</dt><dd><tt>remove&nbsp;the&nbsp;sprite&nbsp;from&nbsp;groups<br>
+<a href="#Sprite">Sprite</a>.<a href="#MovingPlatform-remove">remove</a>(*groups):&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+Any&nbsp;number&nbsp;of&nbsp;Group&nbsp;instances&nbsp;can&nbsp;be&nbsp;passed&nbsp;as&nbsp;arguments.&nbsp;The&nbsp;<a href="#Sprite">Sprite</a>&nbsp;will<br>
+be&nbsp;removed&nbsp;from&nbsp;the&nbsp;Groups&nbsp;it&nbsp;is&nbsp;currently&nbsp;a&nbsp;member&nbsp;of.</tt></dd></dl>
+
+<dl><dt><a name="MovingPlatform-remove_internal"><strong>remove_internal</strong></a>(self, group)</dt></dl>
+
+<dl><dt><a name="MovingPlatform-update"><strong>update</strong></a>(self, *args)</dt><dd><tt>method&nbsp;to&nbsp;control&nbsp;sprite&nbsp;behavior<br>
+<a href="#Sprite">Sprite</a>.<a href="#MovingPlatform-update">update</a>(*args):<br>
+&nbsp;<br>
+The&nbsp;default&nbsp;implementation&nbsp;of&nbsp;this&nbsp;method&nbsp;does&nbsp;nothing;&nbsp;it's&nbsp;just&nbsp;a<br>
+convenient&nbsp;"hook"&nbsp;that&nbsp;you&nbsp;can&nbsp;override.&nbsp;This&nbsp;method&nbsp;is&nbsp;called&nbsp;by<br>
+Group.<a href="#MovingPlatform-update">update</a>()&nbsp;with&nbsp;whatever&nbsp;arguments&nbsp;you&nbsp;give&nbsp;it.<br>
+&nbsp;<br>
+There&nbsp;is&nbsp;no&nbsp;need&nbsp;to&nbsp;use&nbsp;this&nbsp;method&nbsp;if&nbsp;not&nbsp;using&nbsp;the&nbsp;convenience&nbsp;<br>
+method&nbsp;by&nbsp;the&nbsp;same&nbsp;name&nbsp;in&nbsp;the&nbsp;Group&nbsp;class.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Platform">class <strong>Platform</strong></a>(<a href="sprites.html#Sprite">Sprite</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="sprites.html#Platform">Platform</a></dd>
+<dd><a href="sprites.html#Sprite">Sprite</a></dd>
+<dd><a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Platform-__init__"><strong>__init__</strong></a>(self, x, y)</dt></dl>
+
+<dl><dt><a name="Platform-get_surface_rect"><strong>get_surface_rect</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="sprites.html#Sprite">Sprite</a>:<br>
+<dl><dt><a name="Platform-init_image"><strong>init_image</strong></a>(self, imgPath)</dt><dd><tt>#&nbsp;<a href="#Sprite">Sprite</a>&nbsp;image&nbsp;initialization</tt></dd></dl>
+
+<dl><dt><a name="Platform-move_x"><strong>move_x</strong></a>(self, x)</dt></dl>
+
+<dl><dt><a name="Platform-move_y"><strong>move_y</strong></a>(self, y)</dt></dl>
+
+<dl><dt><a name="Platform-set_x"><strong>set_x</strong></a>(self, x)</dt></dl>
+
+<dl><dt><a name="Platform-set_y"><strong>set_y</strong></a>(self, y)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><a name="Platform-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Platform-add"><strong>add</strong></a>(self, *groups)</dt><dd><tt>add&nbsp;the&nbsp;sprite&nbsp;to&nbsp;groups<br>
+<a href="#Sprite">Sprite</a>.<a href="#Platform-add">add</a>(*groups):&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+Any&nbsp;number&nbsp;of&nbsp;Group&nbsp;instances&nbsp;can&nbsp;be&nbsp;passed&nbsp;as&nbsp;arguments.&nbsp;The&nbsp;<br>
+<a href="#Sprite">Sprite</a>&nbsp;will&nbsp;be&nbsp;added&nbsp;to&nbsp;the&nbsp;Groups&nbsp;it&nbsp;is&nbsp;not&nbsp;already&nbsp;a&nbsp;member&nbsp;of.</tt></dd></dl>
+
+<dl><dt><a name="Platform-add_internal"><strong>add_internal</strong></a>(self, group)</dt></dl>
+
+<dl><dt><a name="Platform-alive"><strong>alive</strong></a>(self)</dt><dd><tt>does&nbsp;the&nbsp;sprite&nbsp;belong&nbsp;to&nbsp;any&nbsp;groups<br>
+<a href="#Sprite">Sprite</a>.<a href="#Platform-alive">alive</a>():&nbsp;return&nbsp;bool<br>
+&nbsp;<br>
+Returns&nbsp;True&nbsp;when&nbsp;the&nbsp;<a href="#Sprite">Sprite</a>&nbsp;belongs&nbsp;to&nbsp;one&nbsp;or&nbsp;more&nbsp;Groups.</tt></dd></dl>
+
+<dl><dt><a name="Platform-groups"><strong>groups</strong></a>(self)</dt><dd><tt>list&nbsp;of&nbsp;Groups&nbsp;that&nbsp;contain&nbsp;this&nbsp;<a href="#Sprite">Sprite</a><br>
+<a href="#Sprite">Sprite</a>.<a href="#Platform-groups">groups</a>():&nbsp;return&nbsp;group_list<br>
+&nbsp;<br>
+Return&nbsp;a&nbsp;list&nbsp;of&nbsp;all&nbsp;the&nbsp;Groups&nbsp;that&nbsp;contain&nbsp;this&nbsp;<a href="#Sprite">Sprite</a>.</tt></dd></dl>
+
+<dl><dt><a name="Platform-kill"><strong>kill</strong></a>(self)</dt><dd><tt>remove&nbsp;the&nbsp;<a href="#Sprite">Sprite</a>&nbsp;from&nbsp;all&nbsp;Groups<br>
+<a href="#Sprite">Sprite</a>.<a href="#Platform-kill">kill</a>():&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+The&nbsp;<a href="#Sprite">Sprite</a>&nbsp;is&nbsp;removed&nbsp;from&nbsp;all&nbsp;the&nbsp;Groups&nbsp;that&nbsp;contain&nbsp;it.&nbsp;This&nbsp;won't<br>
+change&nbsp;anything&nbsp;about&nbsp;the&nbsp;state&nbsp;of&nbsp;the&nbsp;<a href="#Sprite">Sprite</a>.&nbsp;It&nbsp;is&nbsp;possible&nbsp;to&nbsp;continue<br>
+to&nbsp;use&nbsp;the&nbsp;<a href="#Sprite">Sprite</a>&nbsp;after&nbsp;this&nbsp;method&nbsp;has&nbsp;been&nbsp;called,&nbsp;including&nbsp;adding&nbsp;it<br>
+to&nbsp;Groups.</tt></dd></dl>
+
+<dl><dt><a name="Platform-remove"><strong>remove</strong></a>(self, *groups)</dt><dd><tt>remove&nbsp;the&nbsp;sprite&nbsp;from&nbsp;groups<br>
+<a href="#Sprite">Sprite</a>.<a href="#Platform-remove">remove</a>(*groups):&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+Any&nbsp;number&nbsp;of&nbsp;Group&nbsp;instances&nbsp;can&nbsp;be&nbsp;passed&nbsp;as&nbsp;arguments.&nbsp;The&nbsp;<a href="#Sprite">Sprite</a>&nbsp;will<br>
+be&nbsp;removed&nbsp;from&nbsp;the&nbsp;Groups&nbsp;it&nbsp;is&nbsp;currently&nbsp;a&nbsp;member&nbsp;of.</tt></dd></dl>
+
+<dl><dt><a name="Platform-remove_internal"><strong>remove_internal</strong></a>(self, group)</dt></dl>
+
+<dl><dt><a name="Platform-update"><strong>update</strong></a>(self, *args)</dt><dd><tt>method&nbsp;to&nbsp;control&nbsp;sprite&nbsp;behavior<br>
+<a href="#Sprite">Sprite</a>.<a href="#Platform-update">update</a>(*args):<br>
+&nbsp;<br>
+The&nbsp;default&nbsp;implementation&nbsp;of&nbsp;this&nbsp;method&nbsp;does&nbsp;nothing;&nbsp;it's&nbsp;just&nbsp;a<br>
+convenient&nbsp;"hook"&nbsp;that&nbsp;you&nbsp;can&nbsp;override.&nbsp;This&nbsp;method&nbsp;is&nbsp;called&nbsp;by<br>
+Group.<a href="#Platform-update">update</a>()&nbsp;with&nbsp;whatever&nbsp;arguments&nbsp;you&nbsp;give&nbsp;it.<br>
+&nbsp;<br>
+There&nbsp;is&nbsp;no&nbsp;need&nbsp;to&nbsp;use&nbsp;this&nbsp;method&nbsp;if&nbsp;not&nbsp;using&nbsp;the&nbsp;convenience&nbsp;<br>
+method&nbsp;by&nbsp;the&nbsp;same&nbsp;name&nbsp;in&nbsp;the&nbsp;Group&nbsp;class.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Rectangle">class <strong>Rectangle</strong></a>(<a href="pygame.html#Surface">pygame.Surface</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="sprites.html#Rectangle">Rectangle</a></dd>
+<dd><a href="pygame.html#Surface">pygame.Surface</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Rectangle-__init__"><strong>__init__</strong></a>(self, width, heigth, color)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Methods inherited from <a href="pygame.html#Surface">pygame.Surface</a>:<br>
+<dl><dt><a name="Rectangle-__copy__"><strong>__copy__</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-copy">copy</a>():&nbsp;return&nbsp;<a href="pygame.html#Surface">Surface</a><br>
+create&nbsp;a&nbsp;new&nbsp;copy&nbsp;of&nbsp;a&nbsp;<a href="pygame.html#Surface">Surface</a></tt></dd></dl>
+
+<dl><dt><a name="Rectangle-__repr__"><strong>__repr__</strong></a>(...)</dt><dd><tt>x.<a href="#Rectangle-__repr__">__repr__</a>()&nbsp;&lt;==&gt;&nbsp;repr(x)</tt></dd></dl>
+
+<dl><dt><a name="Rectangle-blit"><strong>blit</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-blit">blit</a>(source,&nbsp;dest,&nbsp;area=None,&nbsp;special_flags&nbsp;=&nbsp;0):&nbsp;return&nbsp;Rect<br>
+draw&nbsp;one&nbsp;image&nbsp;onto&nbsp;another</tt></dd></dl>
+
+<dl><dt><a name="Rectangle-convert"><strong>convert</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-convert">convert</a>(<a href="pygame.html#Surface">Surface</a>):&nbsp;return&nbsp;<a href="pygame.html#Surface">Surface</a><br>
+<a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-convert">convert</a>(depth,&nbsp;flags=0):&nbsp;return&nbsp;<a href="pygame.html#Surface">Surface</a><br>
+<a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-convert">convert</a>(masks,&nbsp;flags=0):&nbsp;return&nbsp;<a href="pygame.html#Surface">Surface</a><br>
+<a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-convert">convert</a>():&nbsp;return&nbsp;<a href="pygame.html#Surface">Surface</a><br>
+change&nbsp;the&nbsp;pixel&nbsp;format&nbsp;of&nbsp;an&nbsp;image</tt></dd></dl>
+
+<dl><dt><a name="Rectangle-convert_alpha"><strong>convert_alpha</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-convert_alpha">convert_alpha</a>(<a href="pygame.html#Surface">Surface</a>):&nbsp;return&nbsp;<a href="pygame.html#Surface">Surface</a><br>
+<a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-convert_alpha">convert_alpha</a>():&nbsp;return&nbsp;<a href="pygame.html#Surface">Surface</a><br>
+change&nbsp;the&nbsp;pixel&nbsp;format&nbsp;of&nbsp;an&nbsp;image&nbsp;including&nbsp;per&nbsp;pixel&nbsp;alphas</tt></dd></dl>
+
+<dl><dt><a name="Rectangle-copy"><strong>copy</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-copy">copy</a>():&nbsp;return&nbsp;<a href="pygame.html#Surface">Surface</a><br>
+create&nbsp;a&nbsp;new&nbsp;copy&nbsp;of&nbsp;a&nbsp;<a href="pygame.html#Surface">Surface</a></tt></dd></dl>
+
+<dl><dt><a name="Rectangle-fill"><strong>fill</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-fill">fill</a>(color,&nbsp;rect=None,&nbsp;special_flags=0):&nbsp;return&nbsp;Rect<br>
+fill&nbsp;<a href="pygame.html#Surface">Surface</a>&nbsp;with&nbsp;a&nbsp;solid&nbsp;color</tt></dd></dl>
+
+<dl><dt><a name="Rectangle-get_abs_offset"><strong>get_abs_offset</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-get_abs_offset">get_abs_offset</a>():&nbsp;return&nbsp;(x,&nbsp;y)<br>
+find&nbsp;the&nbsp;absolute&nbsp;position&nbsp;of&nbsp;a&nbsp;child&nbsp;subsurface&nbsp;inside&nbsp;its&nbsp;top&nbsp;level&nbsp;parent</tt></dd></dl>
+
+<dl><dt><a name="Rectangle-get_abs_parent"><strong>get_abs_parent</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-get_abs_parent">get_abs_parent</a>():&nbsp;return&nbsp;<a href="pygame.html#Surface">Surface</a><br>
+find&nbsp;the&nbsp;top&nbsp;level&nbsp;parent&nbsp;of&nbsp;a&nbsp;subsurface</tt></dd></dl>
+
+<dl><dt><a name="Rectangle-get_alpha"><strong>get_alpha</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-get_alpha">get_alpha</a>():&nbsp;return&nbsp;int_value&nbsp;or&nbsp;None<br>
+get&nbsp;the&nbsp;current&nbsp;<a href="pygame.html#Surface">Surface</a>&nbsp;transparency&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="Rectangle-get_at"><strong>get_at</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-get_at">get_at</a>((x,&nbsp;y)):&nbsp;return&nbsp;Color<br>
+get&nbsp;the&nbsp;color&nbsp;value&nbsp;at&nbsp;a&nbsp;single&nbsp;pixel</tt></dd></dl>
+
+<dl><dt><a name="Rectangle-get_bitsize"><strong>get_bitsize</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-get_bitsize">get_bitsize</a>():&nbsp;return&nbsp;int<br>
+get&nbsp;the&nbsp;bit&nbsp;depth&nbsp;of&nbsp;the&nbsp;<a href="pygame.html#Surface">Surface</a>&nbsp;pixel&nbsp;format</tt></dd></dl>
+
+<dl><dt><a name="Rectangle-get_bounding_rect"><strong>get_bounding_rect</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-get_bounding_rect">get_bounding_rect</a>(min_alpha&nbsp;=&nbsp;1):&nbsp;return&nbsp;Rect<br>
+find&nbsp;the&nbsp;smallest&nbsp;rect&nbsp;containing&nbsp;data</tt></dd></dl>
+
+<dl><dt><a name="Rectangle-get_buffer"><strong>get_buffer</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-get_buffer">get_buffer</a>():&nbsp;return&nbsp;BufferProxy<br>
+acquires&nbsp;a&nbsp;buffer&nbsp;object&nbsp;for&nbsp;the&nbsp;pixels&nbsp;of&nbsp;the&nbsp;<a href="pygame.html#Surface">Surface</a>.</tt></dd></dl>
+
+<dl><dt><a name="Rectangle-get_bytesize"><strong>get_bytesize</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-get_bytesize">get_bytesize</a>():&nbsp;return&nbsp;int<br>
+get&nbsp;the&nbsp;bytes&nbsp;used&nbsp;per&nbsp;<a href="pygame.html#Surface">Surface</a>&nbsp;pixel</tt></dd></dl>
+
+<dl><dt><a name="Rectangle-get_clip"><strong>get_clip</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-get_clip">get_clip</a>():&nbsp;return&nbsp;Rect<br>
+get&nbsp;the&nbsp;current&nbsp;clipping&nbsp;area&nbsp;of&nbsp;the&nbsp;<a href="pygame.html#Surface">Surface</a></tt></dd></dl>
+
+<dl><dt><a name="Rectangle-get_colorkey"><strong>get_colorkey</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-get_colorkey">get_colorkey</a>():&nbsp;return&nbsp;RGB&nbsp;or&nbsp;None<br>
+Get&nbsp;the&nbsp;current&nbsp;transparent&nbsp;colorkey</tt></dd></dl>
+
+<dl><dt><a name="Rectangle-get_flags"><strong>get_flags</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-get_flags">get_flags</a>():&nbsp;return&nbsp;int<br>
+get&nbsp;the&nbsp;additional&nbsp;flags&nbsp;used&nbsp;for&nbsp;the&nbsp;<a href="pygame.html#Surface">Surface</a></tt></dd></dl>
+
+<dl><dt><a name="Rectangle-get_height"><strong>get_height</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-get_height">get_height</a>():&nbsp;return&nbsp;height<br>
+get&nbsp;the&nbsp;height&nbsp;of&nbsp;the&nbsp;<a href="pygame.html#Surface">Surface</a></tt></dd></dl>
+
+<dl><dt><a name="Rectangle-get_locked"><strong>get_locked</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-get_locked">get_locked</a>():&nbsp;return&nbsp;bool<br>
+test&nbsp;if&nbsp;the&nbsp;<a href="pygame.html#Surface">Surface</a>&nbsp;is&nbsp;current&nbsp;locked</tt></dd></dl>
+
+<dl><dt><a name="Rectangle-get_locks"><strong>get_locks</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-get_locks">get_locks</a>():&nbsp;return&nbsp;tuple<br>
+Gets&nbsp;the&nbsp;locks&nbsp;for&nbsp;the&nbsp;<a href="pygame.html#Surface">Surface</a></tt></dd></dl>
+
+<dl><dt><a name="Rectangle-get_losses"><strong>get_losses</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-get_losses">get_losses</a>():&nbsp;return&nbsp;(R,&nbsp;G,&nbsp;B,&nbsp;A)<br>
+the&nbsp;significant&nbsp;bits&nbsp;used&nbsp;to&nbsp;convert&nbsp;between&nbsp;a&nbsp;color&nbsp;and&nbsp;a&nbsp;mapped&nbsp;integer</tt></dd></dl>
+
+<dl><dt><a name="Rectangle-get_masks"><strong>get_masks</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-get_masks">get_masks</a>():&nbsp;return&nbsp;(R,&nbsp;G,&nbsp;B,&nbsp;A)<br>
+the&nbsp;bitmasks&nbsp;needed&nbsp;to&nbsp;convert&nbsp;between&nbsp;a&nbsp;color&nbsp;and&nbsp;a&nbsp;mapped&nbsp;integer</tt></dd></dl>
+
+<dl><dt><a name="Rectangle-get_offset"><strong>get_offset</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-get_offset">get_offset</a>():&nbsp;return&nbsp;(x,&nbsp;y)<br>
+find&nbsp;the&nbsp;position&nbsp;of&nbsp;a&nbsp;child&nbsp;subsurface&nbsp;inside&nbsp;a&nbsp;parent</tt></dd></dl>
+
+<dl><dt><a name="Rectangle-get_palette"><strong>get_palette</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-get_palette">get_palette</a>():&nbsp;return&nbsp;[RGB,&nbsp;RGB,&nbsp;RGB,&nbsp;...]<br>
+get&nbsp;the&nbsp;color&nbsp;index&nbsp;palette&nbsp;for&nbsp;an&nbsp;8bit&nbsp;<a href="pygame.html#Surface">Surface</a></tt></dd></dl>
+
+<dl><dt><a name="Rectangle-get_palette_at"><strong>get_palette_at</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-get_palette_at">get_palette_at</a>(index):&nbsp;return&nbsp;RGB<br>
+get&nbsp;the&nbsp;color&nbsp;for&nbsp;a&nbsp;single&nbsp;entry&nbsp;in&nbsp;a&nbsp;palette</tt></dd></dl>
+
+<dl><dt><a name="Rectangle-get_parent"><strong>get_parent</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-get_parent">get_parent</a>():&nbsp;return&nbsp;<a href="pygame.html#Surface">Surface</a><br>
+find&nbsp;the&nbsp;parent&nbsp;of&nbsp;a&nbsp;subsurface</tt></dd></dl>
+
+<dl><dt><a name="Rectangle-get_pitch"><strong>get_pitch</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-get_pitch">get_pitch</a>():&nbsp;return&nbsp;int<br>
+get&nbsp;the&nbsp;number&nbsp;of&nbsp;bytes&nbsp;used&nbsp;per&nbsp;<a href="pygame.html#Surface">Surface</a>&nbsp;row</tt></dd></dl>
+
+<dl><dt><a name="Rectangle-get_rect"><strong>get_rect</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-get_rect">get_rect</a>(**kwargs):&nbsp;return&nbsp;Rect<br>
+get&nbsp;the&nbsp;rectangular&nbsp;area&nbsp;of&nbsp;the&nbsp;<a href="pygame.html#Surface">Surface</a></tt></dd></dl>
+
+<dl><dt><a name="Rectangle-get_shifts"><strong>get_shifts</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-get_shifts">get_shifts</a>():&nbsp;return&nbsp;(R,&nbsp;G,&nbsp;B,&nbsp;A)<br>
+the&nbsp;bit&nbsp;shifts&nbsp;needed&nbsp;to&nbsp;convert&nbsp;between&nbsp;a&nbsp;color&nbsp;and&nbsp;a&nbsp;mapped&nbsp;integer</tt></dd></dl>
+
+<dl><dt><a name="Rectangle-get_size"><strong>get_size</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-get_size">get_size</a>():&nbsp;return&nbsp;(width,&nbsp;height)<br>
+get&nbsp;the&nbsp;dimensions&nbsp;of&nbsp;the&nbsp;<a href="pygame.html#Surface">Surface</a></tt></dd></dl>
+
+<dl><dt><a name="Rectangle-get_width"><strong>get_width</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-get_width">get_width</a>():&nbsp;return&nbsp;width<br>
+get&nbsp;the&nbsp;width&nbsp;of&nbsp;the&nbsp;<a href="pygame.html#Surface">Surface</a></tt></dd></dl>
+
+<dl><dt><a name="Rectangle-lock"><strong>lock</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-lock">lock</a>():&nbsp;return&nbsp;None<br>
+lock&nbsp;the&nbsp;<a href="pygame.html#Surface">Surface</a>&nbsp;memory&nbsp;for&nbsp;pixel&nbsp;access</tt></dd></dl>
+
+<dl><dt><a name="Rectangle-map_rgb"><strong>map_rgb</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-map_rgb">map_rgb</a>(Color):&nbsp;return&nbsp;mapped_int<br>
+convert&nbsp;a&nbsp;color&nbsp;into&nbsp;a&nbsp;mapped&nbsp;color&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="Rectangle-mustlock"><strong>mustlock</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-mustlock">mustlock</a>():&nbsp;return&nbsp;bool<br>
+test&nbsp;if&nbsp;the&nbsp;<a href="pygame.html#Surface">Surface</a>&nbsp;requires&nbsp;locking</tt></dd></dl>
+
+<dl><dt><a name="Rectangle-scroll"><strong>scroll</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-scroll">scroll</a>(dx=0,&nbsp;dy=0):&nbsp;return&nbsp;None<br>
+Shift&nbsp;the&nbsp;surface&nbsp;image&nbsp;in&nbsp;place</tt></dd></dl>
+
+<dl><dt><a name="Rectangle-set_alpha"><strong>set_alpha</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-set_alpha">set_alpha</a>(value,&nbsp;flags=0):&nbsp;return&nbsp;None<br>
+<a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-set_alpha">set_alpha</a>(None):&nbsp;return&nbsp;None<br>
+set&nbsp;the&nbsp;alpha&nbsp;value&nbsp;for&nbsp;the&nbsp;full&nbsp;<a href="pygame.html#Surface">Surface</a>&nbsp;image</tt></dd></dl>
+
+<dl><dt><a name="Rectangle-set_at"><strong>set_at</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-set_at">set_at</a>((x,&nbsp;y),&nbsp;Color):&nbsp;return&nbsp;None<br>
+set&nbsp;the&nbsp;color&nbsp;value&nbsp;for&nbsp;a&nbsp;single&nbsp;pixel</tt></dd></dl>
+
+<dl><dt><a name="Rectangle-set_clip"><strong>set_clip</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-set_clip">set_clip</a>(rect):&nbsp;return&nbsp;None<br>
+<a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-set_clip">set_clip</a>(None):&nbsp;return&nbsp;None<br>
+set&nbsp;the&nbsp;current&nbsp;clipping&nbsp;area&nbsp;of&nbsp;the&nbsp;<a href="pygame.html#Surface">Surface</a></tt></dd></dl>
+
+<dl><dt><a name="Rectangle-set_colorkey"><strong>set_colorkey</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-set_colorkey">set_colorkey</a>(Color,&nbsp;flags=0):&nbsp;return&nbsp;None<br>
+<a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-set_colorkey">set_colorkey</a>(None):&nbsp;return&nbsp;None<br>
+Set&nbsp;the&nbsp;transparent&nbsp;colorkey</tt></dd></dl>
+
+<dl><dt><a name="Rectangle-set_masks"><strong>set_masks</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-set_masks">set_masks</a>((r,g,b,a)):&nbsp;return&nbsp;None<br>
+set&nbsp;the&nbsp;bitmasks&nbsp;needed&nbsp;to&nbsp;convert&nbsp;between&nbsp;a&nbsp;color&nbsp;and&nbsp;a&nbsp;mapped&nbsp;integer</tt></dd></dl>
+
+<dl><dt><a name="Rectangle-set_palette"><strong>set_palette</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-set_palette">set_palette</a>([RGB,&nbsp;RGB,&nbsp;RGB,&nbsp;...]):&nbsp;return&nbsp;None<br>
+set&nbsp;the&nbsp;color&nbsp;palette&nbsp;for&nbsp;an&nbsp;8bit&nbsp;<a href="pygame.html#Surface">Surface</a></tt></dd></dl>
+
+<dl><dt><a name="Rectangle-set_palette_at"><strong>set_palette_at</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-set_at">set_at</a>(index,&nbsp;RGB):&nbsp;return&nbsp;None<br>
+set&nbsp;the&nbsp;color&nbsp;for&nbsp;a&nbsp;single&nbsp;index&nbsp;in&nbsp;an&nbsp;8bit&nbsp;<a href="pygame.html#Surface">Surface</a>&nbsp;palette</tt></dd></dl>
+
+<dl><dt><a name="Rectangle-set_shifts"><strong>set_shifts</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-get_shifts">get_shifts</a>((r,g,b,a)):&nbsp;return&nbsp;None<br>
+sets&nbsp;the&nbsp;bit&nbsp;shifts&nbsp;needed&nbsp;to&nbsp;convert&nbsp;between&nbsp;a&nbsp;color&nbsp;and&nbsp;a&nbsp;mapped&nbsp;integer</tt></dd></dl>
+
+<dl><dt><a name="Rectangle-subsurface"><strong>subsurface</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-subsurface">subsurface</a>(Rect):&nbsp;return&nbsp;<a href="pygame.html#Surface">Surface</a><br>
+create&nbsp;a&nbsp;new&nbsp;surface&nbsp;that&nbsp;references&nbsp;its&nbsp;parent</tt></dd></dl>
+
+<dl><dt><a name="Rectangle-unlock"><strong>unlock</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-unlock">unlock</a>():&nbsp;return&nbsp;None<br>
+unlock&nbsp;the&nbsp;<a href="pygame.html#Surface">Surface</a>&nbsp;memory&nbsp;from&nbsp;pixel&nbsp;access</tt></dd></dl>
+
+<dl><dt><a name="Rectangle-unmap_rgb"><strong>unmap_rgb</strong></a>(...)</dt><dd><tt><a href="pygame.html#Surface">Surface</a>.<a href="#Rectangle-map_rgb">map_rgb</a>(mapped_int):&nbsp;return&nbsp;Color<br>
+convert&nbsp;a&nbsp;mapped&nbsp;integer&nbsp;color&nbsp;value&nbsp;into&nbsp;a&nbsp;Color</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="pygame.html#Surface">pygame.Surface</a>:<br>
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object&gt;<dd><tt>T.<a href="#Rectangle-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;object&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Spring">class <strong>Spring</strong></a>(<a href="sprites.html#Sprite">Sprite</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="sprites.html#Spring">Spring</a></dd>
+<dd><a href="sprites.html#Sprite">Sprite</a></dd>
+<dd><a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Spring-__init__"><strong>__init__</strong></a>(self, x, y)</dt></dl>
+
+<dl><dt><a name="Spring-compress"><strong>compress</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Spring-get_top_surface"><strong>get_top_surface</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="sprites.html#Sprite">Sprite</a>:<br>
+<dl><dt><a name="Spring-init_image"><strong>init_image</strong></a>(self, imgPath)</dt><dd><tt>#&nbsp;<a href="#Sprite">Sprite</a>&nbsp;image&nbsp;initialization</tt></dd></dl>
+
+<dl><dt><a name="Spring-move_x"><strong>move_x</strong></a>(self, x)</dt></dl>
+
+<dl><dt><a name="Spring-move_y"><strong>move_y</strong></a>(self, y)</dt></dl>
+
+<dl><dt><a name="Spring-set_x"><strong>set_x</strong></a>(self, x)</dt></dl>
+
+<dl><dt><a name="Spring-set_y"><strong>set_y</strong></a>(self, y)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><a name="Spring-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Spring-add"><strong>add</strong></a>(self, *groups)</dt><dd><tt>add&nbsp;the&nbsp;sprite&nbsp;to&nbsp;groups<br>
+<a href="#Sprite">Sprite</a>.<a href="#Spring-add">add</a>(*groups):&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+Any&nbsp;number&nbsp;of&nbsp;Group&nbsp;instances&nbsp;can&nbsp;be&nbsp;passed&nbsp;as&nbsp;arguments.&nbsp;The&nbsp;<br>
+<a href="#Sprite">Sprite</a>&nbsp;will&nbsp;be&nbsp;added&nbsp;to&nbsp;the&nbsp;Groups&nbsp;it&nbsp;is&nbsp;not&nbsp;already&nbsp;a&nbsp;member&nbsp;of.</tt></dd></dl>
+
+<dl><dt><a name="Spring-add_internal"><strong>add_internal</strong></a>(self, group)</dt></dl>
+
+<dl><dt><a name="Spring-alive"><strong>alive</strong></a>(self)</dt><dd><tt>does&nbsp;the&nbsp;sprite&nbsp;belong&nbsp;to&nbsp;any&nbsp;groups<br>
+<a href="#Sprite">Sprite</a>.<a href="#Spring-alive">alive</a>():&nbsp;return&nbsp;bool<br>
+&nbsp;<br>
+Returns&nbsp;True&nbsp;when&nbsp;the&nbsp;<a href="#Sprite">Sprite</a>&nbsp;belongs&nbsp;to&nbsp;one&nbsp;or&nbsp;more&nbsp;Groups.</tt></dd></dl>
+
+<dl><dt><a name="Spring-groups"><strong>groups</strong></a>(self)</dt><dd><tt>list&nbsp;of&nbsp;Groups&nbsp;that&nbsp;contain&nbsp;this&nbsp;<a href="#Sprite">Sprite</a><br>
+<a href="#Sprite">Sprite</a>.<a href="#Spring-groups">groups</a>():&nbsp;return&nbsp;group_list<br>
+&nbsp;<br>
+Return&nbsp;a&nbsp;list&nbsp;of&nbsp;all&nbsp;the&nbsp;Groups&nbsp;that&nbsp;contain&nbsp;this&nbsp;<a href="#Sprite">Sprite</a>.</tt></dd></dl>
+
+<dl><dt><a name="Spring-kill"><strong>kill</strong></a>(self)</dt><dd><tt>remove&nbsp;the&nbsp;<a href="#Sprite">Sprite</a>&nbsp;from&nbsp;all&nbsp;Groups<br>
+<a href="#Sprite">Sprite</a>.<a href="#Spring-kill">kill</a>():&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+The&nbsp;<a href="#Sprite">Sprite</a>&nbsp;is&nbsp;removed&nbsp;from&nbsp;all&nbsp;the&nbsp;Groups&nbsp;that&nbsp;contain&nbsp;it.&nbsp;This&nbsp;won't<br>
+change&nbsp;anything&nbsp;about&nbsp;the&nbsp;state&nbsp;of&nbsp;the&nbsp;<a href="#Sprite">Sprite</a>.&nbsp;It&nbsp;is&nbsp;possible&nbsp;to&nbsp;continue<br>
+to&nbsp;use&nbsp;the&nbsp;<a href="#Sprite">Sprite</a>&nbsp;after&nbsp;this&nbsp;method&nbsp;has&nbsp;been&nbsp;called,&nbsp;including&nbsp;adding&nbsp;it<br>
+to&nbsp;Groups.</tt></dd></dl>
+
+<dl><dt><a name="Spring-remove"><strong>remove</strong></a>(self, *groups)</dt><dd><tt>remove&nbsp;the&nbsp;sprite&nbsp;from&nbsp;groups<br>
+<a href="#Sprite">Sprite</a>.<a href="#Spring-remove">remove</a>(*groups):&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+Any&nbsp;number&nbsp;of&nbsp;Group&nbsp;instances&nbsp;can&nbsp;be&nbsp;passed&nbsp;as&nbsp;arguments.&nbsp;The&nbsp;<a href="#Sprite">Sprite</a>&nbsp;will<br>
+be&nbsp;removed&nbsp;from&nbsp;the&nbsp;Groups&nbsp;it&nbsp;is&nbsp;currently&nbsp;a&nbsp;member&nbsp;of.</tt></dd></dl>
+
+<dl><dt><a name="Spring-remove_internal"><strong>remove_internal</strong></a>(self, group)</dt></dl>
+
+<dl><dt><a name="Spring-update"><strong>update</strong></a>(self, *args)</dt><dd><tt>method&nbsp;to&nbsp;control&nbsp;sprite&nbsp;behavior<br>
+<a href="#Sprite">Sprite</a>.<a href="#Spring-update">update</a>(*args):<br>
+&nbsp;<br>
+The&nbsp;default&nbsp;implementation&nbsp;of&nbsp;this&nbsp;method&nbsp;does&nbsp;nothing;&nbsp;it's&nbsp;just&nbsp;a<br>
+convenient&nbsp;"hook"&nbsp;that&nbsp;you&nbsp;can&nbsp;override.&nbsp;This&nbsp;method&nbsp;is&nbsp;called&nbsp;by<br>
+Group.<a href="#Spring-update">update</a>()&nbsp;with&nbsp;whatever&nbsp;arguments&nbsp;you&nbsp;give&nbsp;it.<br>
+&nbsp;<br>
+There&nbsp;is&nbsp;no&nbsp;need&nbsp;to&nbsp;use&nbsp;this&nbsp;method&nbsp;if&nbsp;not&nbsp;using&nbsp;the&nbsp;convenience&nbsp;<br>
+method&nbsp;by&nbsp;the&nbsp;same&nbsp;name&nbsp;in&nbsp;the&nbsp;Group&nbsp;class.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Sprite">class <strong>Sprite</strong></a>(<a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Base&nbsp;class&nbsp;for&nbsp;<a href="#Sprite">Sprite</a><br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="sprites.html#Sprite">Sprite</a></dd>
+<dd><a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Sprite-__init__"><strong>__init__</strong></a>(self, x<font color="#909090">=0</font>, y<font color="#909090">=0</font>)</dt><dd><tt>Initialisation</tt></dd></dl>
+
+<dl><dt><a name="Sprite-init_image"><strong>init_image</strong></a>(self, imgPath)</dt><dd><tt>#&nbsp;<a href="#Sprite">Sprite</a>&nbsp;image&nbsp;initialization</tt></dd></dl>
+
+<dl><dt><a name="Sprite-move_x"><strong>move_x</strong></a>(self, x)</dt></dl>
+
+<dl><dt><a name="Sprite-move_y"><strong>move_y</strong></a>(self, y)</dt></dl>
+
+<dl><dt><a name="Sprite-set_x"><strong>set_x</strong></a>(self, x)</dt></dl>
+
+<dl><dt><a name="Sprite-set_y"><strong>set_y</strong></a>(self, y)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><a name="Sprite-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Sprite-add"><strong>add</strong></a>(self, *groups)</dt><dd><tt>add&nbsp;the&nbsp;sprite&nbsp;to&nbsp;groups<br>
+<a href="#Sprite">Sprite</a>.<a href="#Sprite-add">add</a>(*groups):&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+Any&nbsp;number&nbsp;of&nbsp;Group&nbsp;instances&nbsp;can&nbsp;be&nbsp;passed&nbsp;as&nbsp;arguments.&nbsp;The&nbsp;<br>
+<a href="#Sprite">Sprite</a>&nbsp;will&nbsp;be&nbsp;added&nbsp;to&nbsp;the&nbsp;Groups&nbsp;it&nbsp;is&nbsp;not&nbsp;already&nbsp;a&nbsp;member&nbsp;of.</tt></dd></dl>
+
+<dl><dt><a name="Sprite-add_internal"><strong>add_internal</strong></a>(self, group)</dt></dl>
+
+<dl><dt><a name="Sprite-alive"><strong>alive</strong></a>(self)</dt><dd><tt>does&nbsp;the&nbsp;sprite&nbsp;belong&nbsp;to&nbsp;any&nbsp;groups<br>
+<a href="#Sprite">Sprite</a>.<a href="#Sprite-alive">alive</a>():&nbsp;return&nbsp;bool<br>
+&nbsp;<br>
+Returns&nbsp;True&nbsp;when&nbsp;the&nbsp;<a href="#Sprite">Sprite</a>&nbsp;belongs&nbsp;to&nbsp;one&nbsp;or&nbsp;more&nbsp;Groups.</tt></dd></dl>
+
+<dl><dt><a name="Sprite-groups"><strong>groups</strong></a>(self)</dt><dd><tt>list&nbsp;of&nbsp;Groups&nbsp;that&nbsp;contain&nbsp;this&nbsp;<a href="#Sprite">Sprite</a><br>
+<a href="#Sprite">Sprite</a>.<a href="#Sprite-groups">groups</a>():&nbsp;return&nbsp;group_list<br>
+&nbsp;<br>
+Return&nbsp;a&nbsp;list&nbsp;of&nbsp;all&nbsp;the&nbsp;Groups&nbsp;that&nbsp;contain&nbsp;this&nbsp;<a href="#Sprite">Sprite</a>.</tt></dd></dl>
+
+<dl><dt><a name="Sprite-kill"><strong>kill</strong></a>(self)</dt><dd><tt>remove&nbsp;the&nbsp;<a href="#Sprite">Sprite</a>&nbsp;from&nbsp;all&nbsp;Groups<br>
+<a href="#Sprite">Sprite</a>.<a href="#Sprite-kill">kill</a>():&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+The&nbsp;<a href="#Sprite">Sprite</a>&nbsp;is&nbsp;removed&nbsp;from&nbsp;all&nbsp;the&nbsp;Groups&nbsp;that&nbsp;contain&nbsp;it.&nbsp;This&nbsp;won't<br>
+change&nbsp;anything&nbsp;about&nbsp;the&nbsp;state&nbsp;of&nbsp;the&nbsp;<a href="#Sprite">Sprite</a>.&nbsp;It&nbsp;is&nbsp;possible&nbsp;to&nbsp;continue<br>
+to&nbsp;use&nbsp;the&nbsp;<a href="#Sprite">Sprite</a>&nbsp;after&nbsp;this&nbsp;method&nbsp;has&nbsp;been&nbsp;called,&nbsp;including&nbsp;adding&nbsp;it<br>
+to&nbsp;Groups.</tt></dd></dl>
+
+<dl><dt><a name="Sprite-remove"><strong>remove</strong></a>(self, *groups)</dt><dd><tt>remove&nbsp;the&nbsp;sprite&nbsp;from&nbsp;groups<br>
+<a href="#Sprite">Sprite</a>.<a href="#Sprite-remove">remove</a>(*groups):&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+Any&nbsp;number&nbsp;of&nbsp;Group&nbsp;instances&nbsp;can&nbsp;be&nbsp;passed&nbsp;as&nbsp;arguments.&nbsp;The&nbsp;<a href="#Sprite">Sprite</a>&nbsp;will<br>
+be&nbsp;removed&nbsp;from&nbsp;the&nbsp;Groups&nbsp;it&nbsp;is&nbsp;currently&nbsp;a&nbsp;member&nbsp;of.</tt></dd></dl>
+
+<dl><dt><a name="Sprite-remove_internal"><strong>remove_internal</strong></a>(self, group)</dt></dl>
+
+<dl><dt><a name="Sprite-update"><strong>update</strong></a>(self, *args)</dt><dd><tt>method&nbsp;to&nbsp;control&nbsp;sprite&nbsp;behavior<br>
+<a href="#Sprite">Sprite</a>.<a href="#Sprite-update">update</a>(*args):<br>
+&nbsp;<br>
+The&nbsp;default&nbsp;implementation&nbsp;of&nbsp;this&nbsp;method&nbsp;does&nbsp;nothing;&nbsp;it's&nbsp;just&nbsp;a<br>
+convenient&nbsp;"hook"&nbsp;that&nbsp;you&nbsp;can&nbsp;override.&nbsp;This&nbsp;method&nbsp;is&nbsp;called&nbsp;by<br>
+Group.<a href="#Sprite-update">update</a>()&nbsp;with&nbsp;whatever&nbsp;arguments&nbsp;you&nbsp;give&nbsp;it.<br>
+&nbsp;<br>
+There&nbsp;is&nbsp;no&nbsp;need&nbsp;to&nbsp;use&nbsp;this&nbsp;method&nbsp;if&nbsp;not&nbsp;using&nbsp;the&nbsp;convenience&nbsp;<br>
+method&nbsp;by&nbsp;the&nbsp;same&nbsp;name&nbsp;in&nbsp;the&nbsp;Group&nbsp;class.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="TextSprite">class <strong>TextSprite</strong></a>(<a href="sprites.html#Sprite">Sprite</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="sprites.html#TextSprite">TextSprite</a></dd>
+<dd><a href="sprites.html#Sprite">Sprite</a></dd>
+<dd><a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="TextSprite-__init__"><strong>__init__</strong></a>(self, x, y, text<font color="#909090">=''</font>, size<font color="#909090">=35</font>, color<font color="#909090">=(255, 255, 255)</font>)</dt></dl>
+
+<dl><dt><a name="TextSprite-generateImage"><strong>generateImage</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="TextSprite-setColor"><strong>setColor</strong></a>(self, color)</dt></dl>
+
+<dl><dt><a name="TextSprite-setSize"><strong>setSize</strong></a>(self, size)</dt></dl>
+
+<dl><dt><a name="TextSprite-setText"><strong>setText</strong></a>(self, text)</dt></dl>
+
+<hr>
+Methods inherited from <a href="sprites.html#Sprite">Sprite</a>:<br>
+<dl><dt><a name="TextSprite-init_image"><strong>init_image</strong></a>(self, imgPath)</dt><dd><tt>#&nbsp;<a href="#Sprite">Sprite</a>&nbsp;image&nbsp;initialization</tt></dd></dl>
+
+<dl><dt><a name="TextSprite-move_x"><strong>move_x</strong></a>(self, x)</dt></dl>
+
+<dl><dt><a name="TextSprite-move_y"><strong>move_y</strong></a>(self, y)</dt></dl>
+
+<dl><dt><a name="TextSprite-set_x"><strong>set_x</strong></a>(self, x)</dt></dl>
+
+<dl><dt><a name="TextSprite-set_y"><strong>set_y</strong></a>(self, y)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><a name="TextSprite-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="TextSprite-add"><strong>add</strong></a>(self, *groups)</dt><dd><tt>add&nbsp;the&nbsp;sprite&nbsp;to&nbsp;groups<br>
+<a href="#Sprite">Sprite</a>.<a href="#TextSprite-add">add</a>(*groups):&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+Any&nbsp;number&nbsp;of&nbsp;Group&nbsp;instances&nbsp;can&nbsp;be&nbsp;passed&nbsp;as&nbsp;arguments.&nbsp;The&nbsp;<br>
+<a href="#Sprite">Sprite</a>&nbsp;will&nbsp;be&nbsp;added&nbsp;to&nbsp;the&nbsp;Groups&nbsp;it&nbsp;is&nbsp;not&nbsp;already&nbsp;a&nbsp;member&nbsp;of.</tt></dd></dl>
+
+<dl><dt><a name="TextSprite-add_internal"><strong>add_internal</strong></a>(self, group)</dt></dl>
+
+<dl><dt><a name="TextSprite-alive"><strong>alive</strong></a>(self)</dt><dd><tt>does&nbsp;the&nbsp;sprite&nbsp;belong&nbsp;to&nbsp;any&nbsp;groups<br>
+<a href="#Sprite">Sprite</a>.<a href="#TextSprite-alive">alive</a>():&nbsp;return&nbsp;bool<br>
+&nbsp;<br>
+Returns&nbsp;True&nbsp;when&nbsp;the&nbsp;<a href="#Sprite">Sprite</a>&nbsp;belongs&nbsp;to&nbsp;one&nbsp;or&nbsp;more&nbsp;Groups.</tt></dd></dl>
+
+<dl><dt><a name="TextSprite-groups"><strong>groups</strong></a>(self)</dt><dd><tt>list&nbsp;of&nbsp;Groups&nbsp;that&nbsp;contain&nbsp;this&nbsp;<a href="#Sprite">Sprite</a><br>
+<a href="#Sprite">Sprite</a>.<a href="#TextSprite-groups">groups</a>():&nbsp;return&nbsp;group_list<br>
+&nbsp;<br>
+Return&nbsp;a&nbsp;list&nbsp;of&nbsp;all&nbsp;the&nbsp;Groups&nbsp;that&nbsp;contain&nbsp;this&nbsp;<a href="#Sprite">Sprite</a>.</tt></dd></dl>
+
+<dl><dt><a name="TextSprite-kill"><strong>kill</strong></a>(self)</dt><dd><tt>remove&nbsp;the&nbsp;<a href="#Sprite">Sprite</a>&nbsp;from&nbsp;all&nbsp;Groups<br>
+<a href="#Sprite">Sprite</a>.<a href="#TextSprite-kill">kill</a>():&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+The&nbsp;<a href="#Sprite">Sprite</a>&nbsp;is&nbsp;removed&nbsp;from&nbsp;all&nbsp;the&nbsp;Groups&nbsp;that&nbsp;contain&nbsp;it.&nbsp;This&nbsp;won't<br>
+change&nbsp;anything&nbsp;about&nbsp;the&nbsp;state&nbsp;of&nbsp;the&nbsp;<a href="#Sprite">Sprite</a>.&nbsp;It&nbsp;is&nbsp;possible&nbsp;to&nbsp;continue<br>
+to&nbsp;use&nbsp;the&nbsp;<a href="#Sprite">Sprite</a>&nbsp;after&nbsp;this&nbsp;method&nbsp;has&nbsp;been&nbsp;called,&nbsp;including&nbsp;adding&nbsp;it<br>
+to&nbsp;Groups.</tt></dd></dl>
+
+<dl><dt><a name="TextSprite-remove"><strong>remove</strong></a>(self, *groups)</dt><dd><tt>remove&nbsp;the&nbsp;sprite&nbsp;from&nbsp;groups<br>
+<a href="#Sprite">Sprite</a>.<a href="#TextSprite-remove">remove</a>(*groups):&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+Any&nbsp;number&nbsp;of&nbsp;Group&nbsp;instances&nbsp;can&nbsp;be&nbsp;passed&nbsp;as&nbsp;arguments.&nbsp;The&nbsp;<a href="#Sprite">Sprite</a>&nbsp;will<br>
+be&nbsp;removed&nbsp;from&nbsp;the&nbsp;Groups&nbsp;it&nbsp;is&nbsp;currently&nbsp;a&nbsp;member&nbsp;of.</tt></dd></dl>
+
+<dl><dt><a name="TextSprite-remove_internal"><strong>remove_internal</strong></a>(self, group)</dt></dl>
+
+<dl><dt><a name="TextSprite-update"><strong>update</strong></a>(self, *args)</dt><dd><tt>method&nbsp;to&nbsp;control&nbsp;sprite&nbsp;behavior<br>
+<a href="#Sprite">Sprite</a>.<a href="#TextSprite-update">update</a>(*args):<br>
+&nbsp;<br>
+The&nbsp;default&nbsp;implementation&nbsp;of&nbsp;this&nbsp;method&nbsp;does&nbsp;nothing;&nbsp;it's&nbsp;just&nbsp;a<br>
+convenient&nbsp;"hook"&nbsp;that&nbsp;you&nbsp;can&nbsp;override.&nbsp;This&nbsp;method&nbsp;is&nbsp;called&nbsp;by<br>
+Group.<a href="#TextSprite-update">update</a>()&nbsp;with&nbsp;whatever&nbsp;arguments&nbsp;you&nbsp;give&nbsp;it.<br>
+&nbsp;<br>
+There&nbsp;is&nbsp;no&nbsp;need&nbsp;to&nbsp;use&nbsp;this&nbsp;method&nbsp;if&nbsp;not&nbsp;using&nbsp;the&nbsp;convenience&nbsp;<br>
+method&nbsp;by&nbsp;the&nbsp;same&nbsp;name&nbsp;in&nbsp;the&nbsp;Group&nbsp;class.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>ACTIVEEVENT</strong> = 1<br>
+<strong>ANYFORMAT</strong> = 268435456<br>
+<strong>ASYNCBLIT</strong> = 4<br>
+<strong>AUDIO_S16</strong> = 32784<br>
+<strong>AUDIO_S16LSB</strong> = 32784<br>
+<strong>AUDIO_S16MSB</strong> = 36880<br>
+<strong>AUDIO_S16SYS</strong> = 32784<br>
+<strong>AUDIO_S8</strong> = 32776<br>
+<strong>AUDIO_U16</strong> = 16<br>
+<strong>AUDIO_U16LSB</strong> = 16<br>
+<strong>AUDIO_U16MSB</strong> = 4112<br>
+<strong>AUDIO_U16SYS</strong> = 16<br>
+<strong>AUDIO_U8</strong> = 8<br>
+<strong>BIG_ENDIAN</strong> = 4321<br>
+<strong>BLEND_ADD</strong> = 1<br>
+<strong>BLEND_MAX</strong> = 5<br>
+<strong>BLEND_MIN</strong> = 4<br>
+<strong>BLEND_MULT</strong> = 3<br>
+<strong>BLEND_RGBA_ADD</strong> = 6<br>
+<strong>BLEND_RGBA_MAX</strong> = 16<br>
+<strong>BLEND_RGBA_MIN</strong> = 9<br>
+<strong>BLEND_RGBA_MULT</strong> = 8<br>
+<strong>BLEND_RGBA_SUB</strong> = 7<br>
+<strong>BLEND_RGB_ADD</strong> = 1<br>
+<strong>BLEND_RGB_MAX</strong> = 5<br>
+<strong>BLEND_RGB_MIN</strong> = 4<br>
+<strong>BLEND_RGB_MULT</strong> = 3<br>
+<strong>BLEND_RGB_SUB</strong> = 2<br>
+<strong>BLEND_SUB</strong> = 2<br>
+<strong>BUTTON_X1</strong> = 6<br>
+<strong>BUTTON_X2</strong> = 7<br>
+<strong>DOUBLEBUF</strong> = 1073741824<br>
+<strong>FULLSCREEN</strong> = -2147483648<br>
+<strong>GL_ACCELERATED_VISUAL</strong> = 15<br>
+<strong>GL_ACCUM_ALPHA_SIZE</strong> = 11<br>
+<strong>GL_ACCUM_BLUE_SIZE</strong> = 10<br>
+<strong>GL_ACCUM_GREEN_SIZE</strong> = 9<br>
+<strong>GL_ACCUM_RED_SIZE</strong> = 8<br>
+<strong>GL_ALPHA_SIZE</strong> = 3<br>
+<strong>GL_BLUE_SIZE</strong> = 2<br>
+<strong>GL_BUFFER_SIZE</strong> = 4<br>
+<strong>GL_DEPTH_SIZE</strong> = 6<br>
+<strong>GL_DOUBLEBUFFER</strong> = 5<br>
+<strong>GL_GREEN_SIZE</strong> = 1<br>
+<strong>GL_MULTISAMPLEBUFFERS</strong> = 13<br>
+<strong>GL_MULTISAMPLESAMPLES</strong> = 14<br>
+<strong>GL_RED_SIZE</strong> = 0<br>
+<strong>GL_STENCIL_SIZE</strong> = 7<br>
+<strong>GL_STEREO</strong> = 12<br>
+<strong>GL_SWAP_CONTROL</strong> = 16<br>
+<strong>HAT_CENTERED</strong> = 0<br>
+<strong>HAT_DOWN</strong> = 4<br>
+<strong>HAT_LEFT</strong> = 8<br>
+<strong>HAT_LEFTDOWN</strong> = 12<br>
+<strong>HAT_LEFTUP</strong> = 9<br>
+<strong>HAT_RIGHT</strong> = 2<br>
+<strong>HAT_RIGHTDOWN</strong> = 6<br>
+<strong>HAT_RIGHTUP</strong> = 3<br>
+<strong>HAT_UP</strong> = 1<br>
+<strong>HWACCEL</strong> = 256<br>
+<strong>HWPALETTE</strong> = 536870912<br>
+<strong>HWSURFACE</strong> = 1<br>
+<strong>IYUV_OVERLAY</strong> = 1448433993<br>
+<strong>JOYAXISMOTION</strong> = 7<br>
+<strong>JOYBALLMOTION</strong> = 8<br>
+<strong>JOYBUTTONDOWN</strong> = 10<br>
+<strong>JOYBUTTONUP</strong> = 11<br>
+<strong>JOYHATMOTION</strong> = 9<br>
+<strong>KEYDOWN</strong> = 2<br>
+<strong>KEYUP</strong> = 3<br>
+<strong>KMOD_ALT</strong> = 768<br>
+<strong>KMOD_CAPS</strong> = 8192<br>
+<strong>KMOD_CTRL</strong> = 192<br>
+<strong>KMOD_LALT</strong> = 256<br>
+<strong>KMOD_LCTRL</strong> = 64<br>
+<strong>KMOD_LMETA</strong> = 1024<br>
+<strong>KMOD_LSHIFT</strong> = 1<br>
+<strong>KMOD_META</strong> = 3072<br>
+<strong>KMOD_MODE</strong> = 16384<br>
+<strong>KMOD_NONE</strong> = 0<br>
+<strong>KMOD_NUM</strong> = 4096<br>
+<strong>KMOD_RALT</strong> = 512<br>
+<strong>KMOD_RCTRL</strong> = 128<br>
+<strong>KMOD_RMETA</strong> = 2048<br>
+<strong>KMOD_RSHIFT</strong> = 2<br>
+<strong>KMOD_SHIFT</strong> = 3<br>
+<strong>K_0</strong> = 48<br>
+<strong>K_1</strong> = 49<br>
+<strong>K_2</strong> = 50<br>
+<strong>K_3</strong> = 51<br>
+<strong>K_4</strong> = 52<br>
+<strong>K_5</strong> = 53<br>
+<strong>K_6</strong> = 54<br>
+<strong>K_7</strong> = 55<br>
+<strong>K_8</strong> = 56<br>
+<strong>K_9</strong> = 57<br>
+<strong>K_AMPERSAND</strong> = 38<br>
+<strong>K_ASTERISK</strong> = 42<br>
+<strong>K_AT</strong> = 64<br>
+<strong>K_BACKQUOTE</strong> = 96<br>
+<strong>K_BACKSLASH</strong> = 92<br>
+<strong>K_BACKSPACE</strong> = 8<br>
+<strong>K_BREAK</strong> = 318<br>
+<strong>K_CAPSLOCK</strong> = 301<br>
+<strong>K_CARET</strong> = 94<br>
+<strong>K_CLEAR</strong> = 12<br>
+<strong>K_COLON</strong> = 58<br>
+<strong>K_COMMA</strong> = 44<br>
+<strong>K_DELETE</strong> = 127<br>
+<strong>K_DOLLAR</strong> = 36<br>
+<strong>K_DOWN</strong> = 274<br>
+<strong>K_END</strong> = 279<br>
+<strong>K_EQUALS</strong> = 61<br>
+<strong>K_ESCAPE</strong> = 27<br>
+<strong>K_EURO</strong> = 321<br>
+<strong>K_EXCLAIM</strong> = 33<br>
+<strong>K_F1</strong> = 282<br>
+<strong>K_F10</strong> = 291<br>
+<strong>K_F11</strong> = 292<br>
+<strong>K_F12</strong> = 293<br>
+<strong>K_F13</strong> = 294<br>
+<strong>K_F14</strong> = 295<br>
+<strong>K_F15</strong> = 296<br>
+<strong>K_F2</strong> = 283<br>
+<strong>K_F3</strong> = 284<br>
+<strong>K_F4</strong> = 285<br>
+<strong>K_F5</strong> = 286<br>
+<strong>K_F6</strong> = 287<br>
+<strong>K_F7</strong> = 288<br>
+<strong>K_F8</strong> = 289<br>
+<strong>K_F9</strong> = 290<br>
+<strong>K_FIRST</strong> = 0<br>
+<strong>K_GREATER</strong> = 62<br>
+<strong>K_HASH</strong> = 35<br>
+<strong>K_HELP</strong> = 315<br>
+<strong>K_HOME</strong> = 278<br>
+<strong>K_INSERT</strong> = 277<br>
+<strong>K_KP0</strong> = 256<br>
+<strong>K_KP1</strong> = 257<br>
+<strong>K_KP2</strong> = 258<br>
+<strong>K_KP3</strong> = 259<br>
+<strong>K_KP4</strong> = 260<br>
+<strong>K_KP5</strong> = 261<br>
+<strong>K_KP6</strong> = 262<br>
+<strong>K_KP7</strong> = 263<br>
+<strong>K_KP8</strong> = 264<br>
+<strong>K_KP9</strong> = 265<br>
+<strong>K_KP_DIVIDE</strong> = 267<br>
+<strong>K_KP_ENTER</strong> = 271<br>
+<strong>K_KP_EQUALS</strong> = 272<br>
+<strong>K_KP_MINUS</strong> = 269<br>
+<strong>K_KP_MULTIPLY</strong> = 268<br>
+<strong>K_KP_PERIOD</strong> = 266<br>
+<strong>K_KP_PLUS</strong> = 270<br>
+<strong>K_LALT</strong> = 308<br>
+<strong>K_LAST</strong> = 323<br>
+<strong>K_LCTRL</strong> = 306<br>
+<strong>K_LEFT</strong> = 276<br>
+<strong>K_LEFTBRACKET</strong> = 91<br>
+<strong>K_LEFTPAREN</strong> = 40<br>
+<strong>K_LESS</strong> = 60<br>
+<strong>K_LMETA</strong> = 310<br>
+<strong>K_LSHIFT</strong> = 304<br>
+<strong>K_LSUPER</strong> = 311<br>
+<strong>K_MENU</strong> = 319<br>
+<strong>K_MINUS</strong> = 45<br>
+<strong>K_MODE</strong> = 313<br>
+<strong>K_NUMLOCK</strong> = 300<br>
+<strong>K_PAGEDOWN</strong> = 281<br>
+<strong>K_PAGEUP</strong> = 280<br>
+<strong>K_PAUSE</strong> = 19<br>
+<strong>K_PERIOD</strong> = 46<br>
+<strong>K_PLUS</strong> = 43<br>
+<strong>K_POWER</strong> = 320<br>
+<strong>K_PRINT</strong> = 316<br>
+<strong>K_QUESTION</strong> = 63<br>
+<strong>K_QUOTE</strong> = 39<br>
+<strong>K_QUOTEDBL</strong> = 34<br>
+<strong>K_RALT</strong> = 307<br>
+<strong>K_RCTRL</strong> = 305<br>
+<strong>K_RETURN</strong> = 13<br>
+<strong>K_RIGHT</strong> = 275<br>
+<strong>K_RIGHTBRACKET</strong> = 93<br>
+<strong>K_RIGHTPAREN</strong> = 41<br>
+<strong>K_RMETA</strong> = 309<br>
+<strong>K_RSHIFT</strong> = 303<br>
+<strong>K_RSUPER</strong> = 312<br>
+<strong>K_SCROLLOCK</strong> = 302<br>
+<strong>K_SEMICOLON</strong> = 59<br>
+<strong>K_SLASH</strong> = 47<br>
+<strong>K_SPACE</strong> = 32<br>
+<strong>K_SYSREQ</strong> = 317<br>
+<strong>K_TAB</strong> = 9<br>
+<strong>K_UNDERSCORE</strong> = 95<br>
+<strong>K_UNKNOWN</strong> = 0<br>
+<strong>K_UP</strong> = 273<br>
+<strong>K_a</strong> = 97<br>
+<strong>K_b</strong> = 98<br>
+<strong>K_c</strong> = 99<br>
+<strong>K_d</strong> = 100<br>
+<strong>K_e</strong> = 101<br>
+<strong>K_f</strong> = 102<br>
+<strong>K_g</strong> = 103<br>
+<strong>K_h</strong> = 104<br>
+<strong>K_i</strong> = 105<br>
+<strong>K_j</strong> = 106<br>
+<strong>K_k</strong> = 107<br>
+<strong>K_l</strong> = 108<br>
+<strong>K_m</strong> = 109<br>
+<strong>K_n</strong> = 110<br>
+<strong>K_o</strong> = 111<br>
+<strong>K_p</strong> = 112<br>
+<strong>K_q</strong> = 113<br>
+<strong>K_r</strong> = 114<br>
+<strong>K_s</strong> = 115<br>
+<strong>K_t</strong> = 116<br>
+<strong>K_u</strong> = 117<br>
+<strong>K_v</strong> = 118<br>
+<strong>K_w</strong> = 119<br>
+<strong>K_x</strong> = 120<br>
+<strong>K_y</strong> = 121<br>
+<strong>K_z</strong> = 122<br>
+<strong>LIL_ENDIAN</strong> = 1234<br>
+<strong>MOUSEBUTTONDOWN</strong> = 5<br>
+<strong>MOUSEBUTTONUP</strong> = 6<br>
+<strong>MOUSEMOTION</strong> = 4<br>
+<strong>NOEVENT</strong> = 0<br>
+<strong>NOFRAME</strong> = 32<br>
+<strong>NUMEVENTS</strong> = 32<br>
+<strong>OPENGL</strong> = 2<br>
+<strong>OPENGLBLIT</strong> = 10<br>
+<strong>PREALLOC</strong> = 16777216<br>
+<strong>QUIT</strong> = 12<br>
+<strong>RESIZABLE</strong> = 16<br>
+<strong>RLEACCEL</strong> = 16384<br>
+<strong>RLEACCELOK</strong> = 8192<br>
+<strong>SCRAP_BMP</strong> = 'image/bmp'<br>
+<strong>SCRAP_CLIPBOARD</strong> = 0<br>
+<strong>SCRAP_PBM</strong> = 'image/pbm'<br>
+<strong>SCRAP_PPM</strong> = 'image/ppm'<br>
+<strong>SCRAP_SELECTION</strong> = 1<br>
+<strong>SCRAP_TEXT</strong> = 'text/plain'<br>
+<strong>SRCALPHA</strong> = 65536<br>
+<strong>SRCCOLORKEY</strong> = 4096<br>
+<strong>SWSURFACE</strong> = 0<br>
+<strong>SYSWMEVENT</strong> = 13<br>
+<strong>TIMER_RESOLUTION</strong> = 10<br>
+<strong>USEREVENT</strong> = 24<br>
+<strong>UYVY_OVERLAY</strong> = 1498831189<br>
+<strong>VIDEOEXPOSE</strong> = 17<br>
+<strong>VIDEORESIZE</strong> = 16<br>
+<strong>YUY2_OVERLAY</strong> = 844715353<br>
+<strong>YV12_OVERLAY</strong> = 842094169<br>
+<strong>YVYU_OVERLAY</strong> = 1431918169<br>
+<strong>doodle_start_position</strong> = [240, 350]<br>
+<strong>fps</strong> = 45<br>
+<strong>gravitation</strong> = 0.4<br>
+<strong>horizont</strong> = 300<br>
+<strong>jump_speed</strong> = 15<br>
+<strong>mouse_enabled</strong> = False<br>
+<strong>platform_count</strong> = 10<br>
+<strong>platform_width</strong> = 100<br>
+<strong>platform_y_padding</strong> = 7<br>
+<strong>screen_height</strong> = 640<br>
+<strong>screen_width</strong> = 480<br>
+<strong>spring_speed</strong> = 20<br>
+<strong>transparent_walls</strong> = True</td></tr></table>
+</body></html>

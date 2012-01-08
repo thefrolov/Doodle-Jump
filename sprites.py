@@ -1,3 +1,4 @@
+" Module Sprites "
 # -*- coding: utf-8 -*-
 
 import pygame
@@ -7,8 +8,9 @@ from random import randint
 from config import *
 # Base class for sprites
 class Sprite(pygame.sprite.Sprite):
-    
+    " Base class for Sprite "
     def __init__(self, x = 0, y = 0):
+        "Initialisation"
         pygame.sprite.Sprite.__init__(self)
         self.x = x
         self.y = y
@@ -40,6 +42,16 @@ class Sprite(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.center = (self.x,self.y)
         
+
+
+class Monster(Sprite):
+    def __init__(self, x,y):
+        Sprite.__init__(self,x,y)
+        self.init_image('img/monster.png')
+            
+    def move(self):
+        self.move_x(randint(-5, 5))
+        self.move_y(randint(-5, 5))
 
 # doodle sprite
 class Doodle(Sprite):
@@ -89,7 +101,7 @@ class Doodle(Sprite):
         self.score = self.score + score
         
 
-# base class for Platform
+
 class Platform(Sprite):
 
     def get_surface_rect(self):

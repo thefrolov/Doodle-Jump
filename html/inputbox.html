@@ -1,0 +1,294 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module inputbox</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>inputbox</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/sebastian/dev/Doodle-Jump/inputbox.py">/home/sebastian/dev/Doodle-Jump/inputbox.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;by&nbsp;Timothy&nbsp;Downs,&nbsp;inputbox&nbsp;written&nbsp;for&nbsp;my&nbsp;map&nbsp;editor</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="pygame.color.html">pygame.color</a><br>
+</td><td width="25%" valign=top><a href="pygame.html">pygame</a><br>
+</td><td width="25%" valign=top><a href="string.html">string</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-ask"><strong>ask</strong></a>(screen, question)</dt></dl>
+ <dl><dt><a name="-display_box"><strong>display_box</strong></a>(screen, message)</dt><dd><tt>Print&nbsp;a&nbsp;message&nbsp;in&nbsp;a&nbsp;box&nbsp;in&nbsp;the&nbsp;middle&nbsp;of&nbsp;the&nbsp;screen</tt></dd></dl>
+ <dl><dt><a name="-get_key"><strong>get_key</strong></a>()</dt></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>ACTIVEEVENT</strong> = 1<br>
+<strong>ANYFORMAT</strong> = 268435456<br>
+<strong>ASYNCBLIT</strong> = 4<br>
+<strong>AUDIO_S16</strong> = 32784<br>
+<strong>AUDIO_S16LSB</strong> = 32784<br>
+<strong>AUDIO_S16MSB</strong> = 36880<br>
+<strong>AUDIO_S16SYS</strong> = 32784<br>
+<strong>AUDIO_S8</strong> = 32776<br>
+<strong>AUDIO_U16</strong> = 16<br>
+<strong>AUDIO_U16LSB</strong> = 16<br>
+<strong>AUDIO_U16MSB</strong> = 4112<br>
+<strong>AUDIO_U16SYS</strong> = 16<br>
+<strong>AUDIO_U8</strong> = 8<br>
+<strong>BIG_ENDIAN</strong> = 4321<br>
+<strong>BLEND_ADD</strong> = 1<br>
+<strong>BLEND_MAX</strong> = 5<br>
+<strong>BLEND_MIN</strong> = 4<br>
+<strong>BLEND_MULT</strong> = 3<br>
+<strong>BLEND_RGBA_ADD</strong> = 6<br>
+<strong>BLEND_RGBA_MAX</strong> = 16<br>
+<strong>BLEND_RGBA_MIN</strong> = 9<br>
+<strong>BLEND_RGBA_MULT</strong> = 8<br>
+<strong>BLEND_RGBA_SUB</strong> = 7<br>
+<strong>BLEND_RGB_ADD</strong> = 1<br>
+<strong>BLEND_RGB_MAX</strong> = 5<br>
+<strong>BLEND_RGB_MIN</strong> = 4<br>
+<strong>BLEND_RGB_MULT</strong> = 3<br>
+<strong>BLEND_RGB_SUB</strong> = 2<br>
+<strong>BLEND_SUB</strong> = 2<br>
+<strong>BUTTON_X1</strong> = 6<br>
+<strong>BUTTON_X2</strong> = 7<br>
+<strong>DOUBLEBUF</strong> = 1073741824<br>
+<strong>FULLSCREEN</strong> = -2147483648<br>
+<strong>GL_ACCELERATED_VISUAL</strong> = 15<br>
+<strong>GL_ACCUM_ALPHA_SIZE</strong> = 11<br>
+<strong>GL_ACCUM_BLUE_SIZE</strong> = 10<br>
+<strong>GL_ACCUM_GREEN_SIZE</strong> = 9<br>
+<strong>GL_ACCUM_RED_SIZE</strong> = 8<br>
+<strong>GL_ALPHA_SIZE</strong> = 3<br>
+<strong>GL_BLUE_SIZE</strong> = 2<br>
+<strong>GL_BUFFER_SIZE</strong> = 4<br>
+<strong>GL_DEPTH_SIZE</strong> = 6<br>
+<strong>GL_DOUBLEBUFFER</strong> = 5<br>
+<strong>GL_GREEN_SIZE</strong> = 1<br>
+<strong>GL_MULTISAMPLEBUFFERS</strong> = 13<br>
+<strong>GL_MULTISAMPLESAMPLES</strong> = 14<br>
+<strong>GL_RED_SIZE</strong> = 0<br>
+<strong>GL_STENCIL_SIZE</strong> = 7<br>
+<strong>GL_STEREO</strong> = 12<br>
+<strong>GL_SWAP_CONTROL</strong> = 16<br>
+<strong>HAT_CENTERED</strong> = 0<br>
+<strong>HAT_DOWN</strong> = 4<br>
+<strong>HAT_LEFT</strong> = 8<br>
+<strong>HAT_LEFTDOWN</strong> = 12<br>
+<strong>HAT_LEFTUP</strong> = 9<br>
+<strong>HAT_RIGHT</strong> = 2<br>
+<strong>HAT_RIGHTDOWN</strong> = 6<br>
+<strong>HAT_RIGHTUP</strong> = 3<br>
+<strong>HAT_UP</strong> = 1<br>
+<strong>HWACCEL</strong> = 256<br>
+<strong>HWPALETTE</strong> = 536870912<br>
+<strong>HWSURFACE</strong> = 1<br>
+<strong>IYUV_OVERLAY</strong> = 1448433993<br>
+<strong>JOYAXISMOTION</strong> = 7<br>
+<strong>JOYBALLMOTION</strong> = 8<br>
+<strong>JOYBUTTONDOWN</strong> = 10<br>
+<strong>JOYBUTTONUP</strong> = 11<br>
+<strong>JOYHATMOTION</strong> = 9<br>
+<strong>KEYDOWN</strong> = 2<br>
+<strong>KEYUP</strong> = 3<br>
+<strong>KMOD_ALT</strong> = 768<br>
+<strong>KMOD_CAPS</strong> = 8192<br>
+<strong>KMOD_CTRL</strong> = 192<br>
+<strong>KMOD_LALT</strong> = 256<br>
+<strong>KMOD_LCTRL</strong> = 64<br>
+<strong>KMOD_LMETA</strong> = 1024<br>
+<strong>KMOD_LSHIFT</strong> = 1<br>
+<strong>KMOD_META</strong> = 3072<br>
+<strong>KMOD_MODE</strong> = 16384<br>
+<strong>KMOD_NONE</strong> = 0<br>
+<strong>KMOD_NUM</strong> = 4096<br>
+<strong>KMOD_RALT</strong> = 512<br>
+<strong>KMOD_RCTRL</strong> = 128<br>
+<strong>KMOD_RMETA</strong> = 2048<br>
+<strong>KMOD_RSHIFT</strong> = 2<br>
+<strong>KMOD_SHIFT</strong> = 3<br>
+<strong>K_0</strong> = 48<br>
+<strong>K_1</strong> = 49<br>
+<strong>K_2</strong> = 50<br>
+<strong>K_3</strong> = 51<br>
+<strong>K_4</strong> = 52<br>
+<strong>K_5</strong> = 53<br>
+<strong>K_6</strong> = 54<br>
+<strong>K_7</strong> = 55<br>
+<strong>K_8</strong> = 56<br>
+<strong>K_9</strong> = 57<br>
+<strong>K_AMPERSAND</strong> = 38<br>
+<strong>K_ASTERISK</strong> = 42<br>
+<strong>K_AT</strong> = 64<br>
+<strong>K_BACKQUOTE</strong> = 96<br>
+<strong>K_BACKSLASH</strong> = 92<br>
+<strong>K_BACKSPACE</strong> = 8<br>
+<strong>K_BREAK</strong> = 318<br>
+<strong>K_CAPSLOCK</strong> = 301<br>
+<strong>K_CARET</strong> = 94<br>
+<strong>K_CLEAR</strong> = 12<br>
+<strong>K_COLON</strong> = 58<br>
+<strong>K_COMMA</strong> = 44<br>
+<strong>K_DELETE</strong> = 127<br>
+<strong>K_DOLLAR</strong> = 36<br>
+<strong>K_DOWN</strong> = 274<br>
+<strong>K_END</strong> = 279<br>
+<strong>K_EQUALS</strong> = 61<br>
+<strong>K_ESCAPE</strong> = 27<br>
+<strong>K_EURO</strong> = 321<br>
+<strong>K_EXCLAIM</strong> = 33<br>
+<strong>K_F1</strong> = 282<br>
+<strong>K_F10</strong> = 291<br>
+<strong>K_F11</strong> = 292<br>
+<strong>K_F12</strong> = 293<br>
+<strong>K_F13</strong> = 294<br>
+<strong>K_F14</strong> = 295<br>
+<strong>K_F15</strong> = 296<br>
+<strong>K_F2</strong> = 283<br>
+<strong>K_F3</strong> = 284<br>
+<strong>K_F4</strong> = 285<br>
+<strong>K_F5</strong> = 286<br>
+<strong>K_F6</strong> = 287<br>
+<strong>K_F7</strong> = 288<br>
+<strong>K_F8</strong> = 289<br>
+<strong>K_F9</strong> = 290<br>
+<strong>K_FIRST</strong> = 0<br>
+<strong>K_GREATER</strong> = 62<br>
+<strong>K_HASH</strong> = 35<br>
+<strong>K_HELP</strong> = 315<br>
+<strong>K_HOME</strong> = 278<br>
+<strong>K_INSERT</strong> = 277<br>
+<strong>K_KP0</strong> = 256<br>
+<strong>K_KP1</strong> = 257<br>
+<strong>K_KP2</strong> = 258<br>
+<strong>K_KP3</strong> = 259<br>
+<strong>K_KP4</strong> = 260<br>
+<strong>K_KP5</strong> = 261<br>
+<strong>K_KP6</strong> = 262<br>
+<strong>K_KP7</strong> = 263<br>
+<strong>K_KP8</strong> = 264<br>
+<strong>K_KP9</strong> = 265<br>
+<strong>K_KP_DIVIDE</strong> = 267<br>
+<strong>K_KP_ENTER</strong> = 271<br>
+<strong>K_KP_EQUALS</strong> = 272<br>
+<strong>K_KP_MINUS</strong> = 269<br>
+<strong>K_KP_MULTIPLY</strong> = 268<br>
+<strong>K_KP_PERIOD</strong> = 266<br>
+<strong>K_KP_PLUS</strong> = 270<br>
+<strong>K_LALT</strong> = 308<br>
+<strong>K_LAST</strong> = 323<br>
+<strong>K_LCTRL</strong> = 306<br>
+<strong>K_LEFT</strong> = 276<br>
+<strong>K_LEFTBRACKET</strong> = 91<br>
+<strong>K_LEFTPAREN</strong> = 40<br>
+<strong>K_LESS</strong> = 60<br>
+<strong>K_LMETA</strong> = 310<br>
+<strong>K_LSHIFT</strong> = 304<br>
+<strong>K_LSUPER</strong> = 311<br>
+<strong>K_MENU</strong> = 319<br>
+<strong>K_MINUS</strong> = 45<br>
+<strong>K_MODE</strong> = 313<br>
+<strong>K_NUMLOCK</strong> = 300<br>
+<strong>K_PAGEDOWN</strong> = 281<br>
+<strong>K_PAGEUP</strong> = 280<br>
+<strong>K_PAUSE</strong> = 19<br>
+<strong>K_PERIOD</strong> = 46<br>
+<strong>K_PLUS</strong> = 43<br>
+<strong>K_POWER</strong> = 320<br>
+<strong>K_PRINT</strong> = 316<br>
+<strong>K_QUESTION</strong> = 63<br>
+<strong>K_QUOTE</strong> = 39<br>
+<strong>K_QUOTEDBL</strong> = 34<br>
+<strong>K_RALT</strong> = 307<br>
+<strong>K_RCTRL</strong> = 305<br>
+<strong>K_RETURN</strong> = 13<br>
+<strong>K_RIGHT</strong> = 275<br>
+<strong>K_RIGHTBRACKET</strong> = 93<br>
+<strong>K_RIGHTPAREN</strong> = 41<br>
+<strong>K_RMETA</strong> = 309<br>
+<strong>K_RSHIFT</strong> = 303<br>
+<strong>K_RSUPER</strong> = 312<br>
+<strong>K_SCROLLOCK</strong> = 302<br>
+<strong>K_SEMICOLON</strong> = 59<br>
+<strong>K_SLASH</strong> = 47<br>
+<strong>K_SPACE</strong> = 32<br>
+<strong>K_SYSREQ</strong> = 317<br>
+<strong>K_TAB</strong> = 9<br>
+<strong>K_UNDERSCORE</strong> = 95<br>
+<strong>K_UNKNOWN</strong> = 0<br>
+<strong>K_UP</strong> = 273<br>
+<strong>K_a</strong> = 97<br>
+<strong>K_b</strong> = 98<br>
+<strong>K_c</strong> = 99<br>
+<strong>K_d</strong> = 100<br>
+<strong>K_e</strong> = 101<br>
+<strong>K_f</strong> = 102<br>
+<strong>K_g</strong> = 103<br>
+<strong>K_h</strong> = 104<br>
+<strong>K_i</strong> = 105<br>
+<strong>K_j</strong> = 106<br>
+<strong>K_k</strong> = 107<br>
+<strong>K_l</strong> = 108<br>
+<strong>K_m</strong> = 109<br>
+<strong>K_n</strong> = 110<br>
+<strong>K_o</strong> = 111<br>
+<strong>K_p</strong> = 112<br>
+<strong>K_q</strong> = 113<br>
+<strong>K_r</strong> = 114<br>
+<strong>K_s</strong> = 115<br>
+<strong>K_t</strong> = 116<br>
+<strong>K_u</strong> = 117<br>
+<strong>K_v</strong> = 118<br>
+<strong>K_w</strong> = 119<br>
+<strong>K_x</strong> = 120<br>
+<strong>K_y</strong> = 121<br>
+<strong>K_z</strong> = 122<br>
+<strong>LIL_ENDIAN</strong> = 1234<br>
+<strong>MOUSEBUTTONDOWN</strong> = 5<br>
+<strong>MOUSEBUTTONUP</strong> = 6<br>
+<strong>MOUSEMOTION</strong> = 4<br>
+<strong>NOEVENT</strong> = 0<br>
+<strong>NOFRAME</strong> = 32<br>
+<strong>NUMEVENTS</strong> = 32<br>
+<strong>OPENGL</strong> = 2<br>
+<strong>OPENGLBLIT</strong> = 10<br>
+<strong>PREALLOC</strong> = 16777216<br>
+<strong>QUIT</strong> = 12<br>
+<strong>RESIZABLE</strong> = 16<br>
+<strong>RLEACCEL</strong> = 16384<br>
+<strong>RLEACCELOK</strong> = 8192<br>
+<strong>SCRAP_BMP</strong> = 'image/bmp'<br>
+<strong>SCRAP_CLIPBOARD</strong> = 0<br>
+<strong>SCRAP_PBM</strong> = 'image/pbm'<br>
+<strong>SCRAP_PPM</strong> = 'image/ppm'<br>
+<strong>SCRAP_SELECTION</strong> = 1<br>
+<strong>SCRAP_TEXT</strong> = 'text/plain'<br>
+<strong>SRCALPHA</strong> = 65536<br>
+<strong>SRCCOLORKEY</strong> = 4096<br>
+<strong>SWSURFACE</strong> = 0<br>
+<strong>SYSWMEVENT</strong> = 13<br>
+<strong>TIMER_RESOLUTION</strong> = 10<br>
+<strong>USEREVENT</strong> = 24<br>
+<strong>UYVY_OVERLAY</strong> = 1498831189<br>
+<strong>VIDEOEXPOSE</strong> = 17<br>
+<strong>VIDEORESIZE</strong> = 16<br>
+<strong>YUY2_OVERLAY</strong> = 844715353<br>
+<strong>YV12_OVERLAY</strong> = 842094169<br>
+<strong>YVYU_OVERLAY</strong> = 1431918169</td></tr></table>
+</body></html>

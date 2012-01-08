@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import pygame
-from pygame import _view
+#from pygame import _view
 from pygame.locals import *
 import sys
 
@@ -36,8 +36,8 @@ def main():
 
     start_location = StartLocation(game)
 
-    #game.location = start_location
-    game.location = GameLocation(game,'Т0стер')
+    game.location = start_location
+    #game.location = GameLocation(game,'Т0стер')
 
     clock = pygame.time.Clock()
     while 1:

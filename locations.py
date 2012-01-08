@@ -2,7 +2,7 @@
 
 import pygame
 from pygame.locals import *
-from sprites import Doodle, Platform, MovingPlatform, CrashingPlatform, Rectangle, Button, TextSprite, Spring
+from sprites import Doodle, Platform, MovingPlatform, CrashingPlatform, Rectangle, Button, TextSprite, Spring, Monster
 import sys
 from random import randint
 import inputbox
@@ -90,25 +90,27 @@ class GameLocation(Location):
         self.allsprites.add(self.score_sprite)
         self.header = Rectangle(screen_width, 50, (0,191,255,128))
         self.window.blit(self.background, (0, 0))
+        
+        self.monster = None
     
     
     def randomPlatform(self,top = True):
-        x = randint(-0, screen_width - platform_width)
-#         bad_y = []
-#         for spr in self.allsprites:
-#             bad_y.append((spr.y-platform_y_padding, spr.y + platform_y_padding + spr.rect.height))
-#         
-#         good = 0
-#         while not good:
-        if top:
-           y = randint(-50, 50)
-        else:
-            y = randint(0, screen_height)
-#             good = 1
-#             for bad_y_item in bad_y:
-#                 if bad_y_item[0] <= y <= bad_y_item[1]:
-#                     good = 0
-#                     break
+        x = randint(0, screen_width - platform_width)
+        bad_y = []
+        for spr in self.allsprites:
+            bad_y.append((spr.y-platform_y_padding, spr.y + platform_y_padding + spr.rect.height))
+        
+        good = 0
+        while not good:
+            if top:
+               y = randint(-100, 50)
+            else:
+                y = randint(0, screen_height)
+            good = 1
+            for bad_y_item in bad_y:
+                if bad_y_item[0] <= y <= bad_y_item[1]:
+                    good = 0
+                    break
             
         dig = randint(0, 100)
         if dig < 35:
@@ -118,9 +120,28 @@ class GameLocation(Location):
         else:
             return Platform(x,y)
     
+    
+    
     def draw(self):
         if self.doodle.alive == 1:
+            # create monster
+            if self.monster == None:
+                case = randint(-1000,5)
+                if case > 0:
+                    self.monster = Monster(randint(0, screen_width), randint(-50, 50))
+                    self.allsprites.add(self.monster)
+                    self.monster.move()
+            else:
+                self.monster.move()
+                # touch monster
+                if self.doodle.rect.colliderect(self.monster.rect):
+                    self.doodle.alive = 0
+                if self.monster.y >= screen_height:
+                    self.allsprites.remove(self.monster)
+                    self.monster = None
+                    
             self.allsprites.clear(self.window, self.background)
+            
             # doodler jumps
             mousePos = pygame.mouse.get_pos()
             self.doodle.inc_y_speed(-gravitation)

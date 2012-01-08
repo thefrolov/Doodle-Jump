@@ -12,9 +12,9 @@ horizont = 300
 mouse_enabled = False
 transparent_walls = True
 
-platform_count = 15
-gravitation = 0.2
-jump_speed = 10
-spring_speed = 15
+platform_count = 10
+gravitation = 0.4
+jump_speed = 15
+spring_speed = 20
 
-platform_y_padding = 0
+platform_y_padding = 7
