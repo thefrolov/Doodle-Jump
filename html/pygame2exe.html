@@ -1,0 +1,263 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module pygame2exe</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>pygame2exe</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:///C:/users/natata0404/desktop/git/doodle-jump/pygame2exe.py">c:\users\natata0404\desktop\git\doodle-jump\pygame2exe.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;-*-&nbsp;coding:&nbsp;utf-8&nbsp;-*-</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="fnmatch.html">fnmatch</a><br>
+<a href="glob.html">glob</a><br>
+</td><td width="25%" valign=top><a href="operator.html">operator</a><br>
+<a href="os.html">os</a><br>
+</td><td width="25%" valign=top><a href="py2exe.html">py2exe</a><br>
+<a href="pygame.html">pygame</a><br>
+</td><td width="25%" valign=top><a href="shutil.html">shutil</a><br>
+<a href="sys.html">sys</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="py2exe.build_exe.html#py2exe">py2exe.build_exe.py2exe</a>(<a href="distutils.cmd.html#Command">distutils.cmd.Command</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pygame2exe.html#pygame2exe">pygame2exe</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="pygame2exe.html#BuildExe">BuildExe</a>
+</font></dt></dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="BuildExe">class <strong>BuildExe</strong></a></font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="BuildExe-__init__"><strong>__init__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="BuildExe-find_data_files"><strong>find_data_files</strong></a>(self, srcdir, *wildcards, **kw)</dt></dl>
+
+<dl><dt><a name="BuildExe-opj"><strong>opj</strong></a>(self, *args)</dt><dd><tt>##&nbsp;Code&nbsp;from&nbsp;DistUtils&nbsp;tutorial&nbsp;at&nbsp;<a href="http://wiki.python.org/moin/Distutils/Tutorial">http://wiki.python.org/moin/Distutils/Tutorial</a><br>
+##&nbsp;Originally&nbsp;borrowed&nbsp;from&nbsp;wxPython's&nbsp;setup&nbsp;and&nbsp;config&nbsp;files</tt></dd></dl>
+
+<dl><dt><a name="BuildExe-run"><strong>run</strong></a>(self)</dt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="pygame2exe">class <strong>pygame2exe</strong></a>(<a href="py2exe.build_exe.html#py2exe">py2exe.build_exe.py2exe</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pygame2exe.html#pygame2exe">pygame2exe</a></dd>
+<dd><a href="py2exe.build_exe.html#py2exe">py2exe.build_exe.py2exe</a></dd>
+<dd><a href="distutils.cmd.html#Command">distutils.cmd.Command</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="pygame2exe-copy_extensions"><strong>copy_extensions</strong></a>(self, extensions)</dt></dl>
+
+<hr>
+Methods inherited from <a href="py2exe.build_exe.html#py2exe">py2exe.build_exe.py2exe</a>:<br>
+<dl><dt><a name="pygame2exe-add_versioninfo"><strong>add_versioninfo</strong></a>(self, target, exe_path)</dt></dl>
+
+<dl><dt><a name="pygame2exe-build_comserver"><strong>build_comserver</strong></a>(self, target, template, arcname, boot_script<font color="#909090">='com_servers'</font>)</dt></dl>
+
+<dl><dt><a name="pygame2exe-build_executable"><strong>build_executable</strong></a>(self, target, template, arcname, script, vars<font color="#909090">={}</font>)</dt></dl>
+
+<dl><dt><a name="pygame2exe-build_isapi"><strong>build_isapi</strong></a>(self, target, template, arcname)</dt></dl>
+
+<dl><dt><a name="pygame2exe-build_manifest"><strong>build_manifest</strong></a>(self, target, template)</dt></dl>
+
+<dl><dt><a name="pygame2exe-build_service"><strong>build_service</strong></a>(self, target, template, arcname)</dt></dl>
+
+<dl><dt><a name="pygame2exe-copy_dlls"><strong>copy_dlls</strong></a>(self, dlls)</dt></dl>
+
+<dl><dt><a name="pygame2exe-copy_dlls_bundle_files"><strong>copy_dlls_bundle_files</strong></a>(self, dlls)</dt></dl>
+
+<dl><dt><a name="pygame2exe-copy_w9xpopen"><strong>copy_w9xpopen</strong></a>(self, modules, dlls)</dt></dl>
+
+<dl><dt><a name="pygame2exe-create_binaries"><strong>create_binaries</strong></a>(self, py_files, extensions, dlls)</dt></dl>
+
+<dl><dt><a name="pygame2exe-create_directories"><strong>create_directories</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="pygame2exe-create_loader"><strong>create_loader</strong></a>(self, item)</dt></dl>
+
+<dl><dt><a name="pygame2exe-create_modulefinder"><strong>create_modulefinder</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="pygame2exe-finalize_options"><strong>finalize_options</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="pygame2exe-find_dependend_dlls"><strong>find_dependend_dlls</strong></a>(self, dlls, pypath, dll_excludes)</dt></dl>
+
+<dl><dt><a name="pygame2exe-find_dlls"><strong>find_dlls</strong></a>(self, extensions)</dt></dl>
+
+<dl><dt><a name="pygame2exe-find_needed_modules"><strong>find_needed_modules</strong></a>(self, mf, files, modules)</dt></dl>
+
+<dl><dt><a name="pygame2exe-fix_badmodules"><strong>fix_badmodules</strong></a>(self, mf)</dt></dl>
+
+<dl><dt><a name="pygame2exe-fixup_distribution"><strong>fixup_distribution</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="pygame2exe-get_boot_script"><strong>get_boot_script</strong></a>(self, boot_type)</dt></dl>
+
+<dl><dt><a name="pygame2exe-get_comdll_template"><strong>get_comdll_template</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="pygame2exe-get_comexe_template"><strong>get_comexe_template</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="pygame2exe-get_console_template"><strong>get_console_template</strong></a>(self)</dt><dd><tt>#&nbsp;for&nbsp;user&nbsp;convenience,&nbsp;let&nbsp;subclasses&nbsp;override&nbsp;the&nbsp;templates&nbsp;to&nbsp;use</tt></dd></dl>
+
+<dl><dt><a name="pygame2exe-get_ctypes_comdll_template"><strong>get_ctypes_comdll_template</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="pygame2exe-get_hidden_imports"><strong>get_hidden_imports</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="pygame2exe-get_isapi_template"><strong>get_isapi_template</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="pygame2exe-get_service_names"><strong>get_service_names</strong></a>(self, module_name)</dt></dl>
+
+<dl><dt><a name="pygame2exe-get_service_template"><strong>get_service_template</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="pygame2exe-get_windows_template"><strong>get_windows_template</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="pygame2exe-initialize_options"><strong>initialize_options</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="pygame2exe-make_lib_archive"><strong>make_lib_archive</strong></a>(self, zip_filename, base_dir, files, verbose<font color="#909090">=0</font>, dry_run<font color="#909090">=0</font>)</dt></dl>
+
+<dl><dt><a name="pygame2exe-parse_mf_results"><strong>parse_mf_results</strong></a>(self, mf)</dt></dl>
+
+<dl><dt><a name="pygame2exe-patch_python_dll_winver"><strong>patch_python_dll_winver</strong></a>(self, dll_name, new_winver<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="pygame2exe-plat_finalize"><strong>plat_finalize</strong></a>(self, modules, py_files, extensions, dlls)</dt></dl>
+
+<dl><dt><a name="pygame2exe-plat_prepare"><strong>plat_prepare</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="pygame2exe-run"><strong>run</strong></a>(self)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="py2exe.build_exe.html#py2exe">py2exe.build_exe.py2exe</a>:<br>
+<dl><dt><strong>boolean_options</strong> = ['compressed', 'xref', 'ascii', 'skip-archive']</dl>
+
+<dl><dt><strong>description</strong> = ''</dl>
+
+<dl><dt><strong>user_options</strong> = [('optimize=', 'O', 'optimization level: -O1 for "python -O", -O2 for "python -OO", and -O0 to disable [default: -O0]'), ('dist-dir=', 'd', 'directory to put final built distributions in (default is dist)'), ('excludes=', 'e', 'comma-separated list of modules to exclude'), ('dll-excludes=', None, 'comma-separated list of DLLs to exclude'), ('ignores=', None, 'comma-separated list of modules to ignore if they are not found'), ('includes=', 'i', 'comma-separated list of modules to include'), ('packages=', 'p', 'comma-separated list of packages to include'), ('compressed', 'c', 'create a compressed zipfile'), ('xref', 'x', 'create and show a module cross reference'), ('bundle-files=', 'b', 'bundle dlls in the zipfile or the exe. Valid levels are 1, 2, or 3 (default)'), ('skip-archive', None, 'do not place Python bytecode files in an archive, put them directly in the file system'), ('ascii', 'a', 'do not automatically include encodings and codecs'), ('custom-boot-script=', None, 'Python file that will be run when setting up the runtime environment')]</dl>
+
+<hr>
+Methods inherited from <a href="distutils.cmd.html#Command">distutils.cmd.Command</a>:<br>
+<dl><dt><a name="pygame2exe-__getattr__"><strong>__getattr__</strong></a>(self, attr)</dt><dd><tt>#&nbsp;XXX&nbsp;A&nbsp;more&nbsp;explicit&nbsp;way&nbsp;to&nbsp;customize&nbsp;dry_run&nbsp;would&nbsp;be&nbsp;better.</tt></dd></dl>
+
+<dl><dt><a name="pygame2exe-__init__"><strong>__init__</strong></a>(self, dist)</dt><dd><tt>Create&nbsp;and&nbsp;initialize&nbsp;a&nbsp;new&nbsp;Command&nbsp;object.&nbsp;&nbsp;Most&nbsp;importantly,<br>
+invokes&nbsp;the&nbsp;'<a href="#pygame2exe-initialize_options">initialize_options</a>()'&nbsp;method,&nbsp;which&nbsp;is&nbsp;the&nbsp;real<br>
+initializer&nbsp;and&nbsp;depends&nbsp;on&nbsp;the&nbsp;actual&nbsp;command&nbsp;being<br>
+instantiated.</tt></dd></dl>
+
+<dl><dt><a name="pygame2exe-announce"><strong>announce</strong></a>(self, msg, level<font color="#909090">=1</font>)</dt><dd><tt>If&nbsp;the&nbsp;current&nbsp;verbosity&nbsp;level&nbsp;is&nbsp;of&nbsp;greater&nbsp;than&nbsp;or&nbsp;equal&nbsp;to<br>
+'level'&nbsp;print&nbsp;'msg'&nbsp;to&nbsp;stdout.</tt></dd></dl>
+
+<dl><dt><a name="pygame2exe-copy_file"><strong>copy_file</strong></a>(self, infile, outfile, preserve_mode<font color="#909090">=1</font>, preserve_times<font color="#909090">=1</font>, link<font color="#909090">=None</font>, level<font color="#909090">=1</font>)</dt><dd><tt>Copy&nbsp;a&nbsp;file&nbsp;respecting&nbsp;verbose,&nbsp;dry-run&nbsp;and&nbsp;force&nbsp;flags.&nbsp;&nbsp;(The<br>
+former&nbsp;two&nbsp;default&nbsp;to&nbsp;whatever&nbsp;is&nbsp;in&nbsp;the&nbsp;Distribution&nbsp;object,&nbsp;and<br>
+the&nbsp;latter&nbsp;defaults&nbsp;to&nbsp;false&nbsp;for&nbsp;commands&nbsp;that&nbsp;don't&nbsp;define&nbsp;it.)</tt></dd></dl>
+
+<dl><dt><a name="pygame2exe-copy_tree"><strong>copy_tree</strong></a>(self, infile, outfile, preserve_mode<font color="#909090">=1</font>, preserve_times<font color="#909090">=1</font>, preserve_symlinks<font color="#909090">=0</font>, level<font color="#909090">=1</font>)</dt><dd><tt>Copy&nbsp;an&nbsp;entire&nbsp;directory&nbsp;tree&nbsp;respecting&nbsp;verbose,&nbsp;dry-run,<br>
+and&nbsp;force&nbsp;flags.</tt></dd></dl>
+
+<dl><dt><a name="pygame2exe-debug_print"><strong>debug_print</strong></a>(self, msg)</dt><dd><tt>Print&nbsp;'msg'&nbsp;to&nbsp;stdout&nbsp;if&nbsp;the&nbsp;global&nbsp;DEBUG&nbsp;(taken&nbsp;from&nbsp;the<br>
+DISTUTILS_DEBUG&nbsp;environment&nbsp;variable)&nbsp;flag&nbsp;is&nbsp;true.</tt></dd></dl>
+
+<dl><dt><a name="pygame2exe-dump_options"><strong>dump_options</strong></a>(self, header<font color="#909090">=None</font>, indent<font color="#909090">=''</font>)</dt></dl>
+
+<dl><dt><a name="pygame2exe-ensure_dirname"><strong>ensure_dirname</strong></a>(self, option)</dt></dl>
+
+<dl><dt><a name="pygame2exe-ensure_filename"><strong>ensure_filename</strong></a>(self, option)</dt><dd><tt>Ensure&nbsp;that&nbsp;'option'&nbsp;is&nbsp;the&nbsp;name&nbsp;of&nbsp;an&nbsp;existing&nbsp;file.</tt></dd></dl>
+
+<dl><dt><a name="pygame2exe-ensure_finalized"><strong>ensure_finalized</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="pygame2exe-ensure_string"><strong>ensure_string</strong></a>(self, option, default<font color="#909090">=None</font>)</dt><dd><tt>Ensure&nbsp;that&nbsp;'option'&nbsp;is&nbsp;a&nbsp;string;&nbsp;if&nbsp;not&nbsp;defined,&nbsp;set&nbsp;it&nbsp;to<br>
+'default'.</tt></dd></dl>
+
+<dl><dt><a name="pygame2exe-ensure_string_list"><strong>ensure_string_list</strong></a>(self, option)</dt><dd><tt>Ensure&nbsp;that&nbsp;'option'&nbsp;is&nbsp;a&nbsp;list&nbsp;of&nbsp;strings.&nbsp;&nbsp;If&nbsp;'option'&nbsp;is<br>
+currently&nbsp;a&nbsp;string,&nbsp;we&nbsp;split&nbsp;it&nbsp;either&nbsp;on&nbsp;/,\s*/&nbsp;or&nbsp;/\s+/,&nbsp;so<br>
+"foo&nbsp;bar&nbsp;baz",&nbsp;"foo,bar,baz",&nbsp;and&nbsp;"foo,&nbsp;&nbsp;&nbsp;bar&nbsp;baz"&nbsp;all&nbsp;become<br>
+["foo",&nbsp;"bar",&nbsp;"baz"].</tt></dd></dl>
+
+<dl><dt><a name="pygame2exe-execute"><strong>execute</strong></a>(self, func, args, msg<font color="#909090">=None</font>, level<font color="#909090">=1</font>)</dt></dl>
+
+<dl><dt><a name="pygame2exe-get_command_name"><strong>get_command_name</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="pygame2exe-get_finalized_command"><strong>get_finalized_command</strong></a>(self, command, create<font color="#909090">=1</font>)</dt><dd><tt>Wrapper&nbsp;around&nbsp;Distribution's&nbsp;'get_command_obj()'&nbsp;method:&nbsp;find<br>
+(create&nbsp;if&nbsp;necessary&nbsp;and&nbsp;'create'&nbsp;is&nbsp;true)&nbsp;the&nbsp;command&nbsp;object&nbsp;for<br>
+'command',&nbsp;call&nbsp;its&nbsp;'<a href="#pygame2exe-ensure_finalized">ensure_finalized</a>()'&nbsp;method,&nbsp;and&nbsp;return&nbsp;the<br>
+finalized&nbsp;command&nbsp;object.</tt></dd></dl>
+
+<dl><dt><a name="pygame2exe-get_sub_commands"><strong>get_sub_commands</strong></a>(self)</dt><dd><tt>Determine&nbsp;the&nbsp;sub-commands&nbsp;that&nbsp;are&nbsp;relevant&nbsp;in&nbsp;the&nbsp;current<br>
+distribution&nbsp;(ie.,&nbsp;that&nbsp;need&nbsp;to&nbsp;be&nbsp;run).&nbsp;&nbsp;This&nbsp;is&nbsp;based&nbsp;on&nbsp;the<br>
+'sub_commands'&nbsp;class&nbsp;attribute:&nbsp;each&nbsp;tuple&nbsp;in&nbsp;that&nbsp;list&nbsp;may&nbsp;include<br>
+a&nbsp;method&nbsp;that&nbsp;we&nbsp;call&nbsp;to&nbsp;determine&nbsp;if&nbsp;the&nbsp;subcommand&nbsp;needs&nbsp;to&nbsp;be<br>
+run&nbsp;for&nbsp;the&nbsp;current&nbsp;distribution.&nbsp;&nbsp;Return&nbsp;a&nbsp;list&nbsp;of&nbsp;command&nbsp;names.</tt></dd></dl>
+
+<dl><dt><a name="pygame2exe-make_archive"><strong>make_archive</strong></a>(self, base_name, format, root_dir<font color="#909090">=None</font>, base_dir<font color="#909090">=None</font>, owner<font color="#909090">=None</font>, group<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="pygame2exe-make_file"><strong>make_file</strong></a>(self, infiles, outfile, func, args, exec_msg<font color="#909090">=None</font>, skip_msg<font color="#909090">=None</font>, level<font color="#909090">=1</font>)</dt><dd><tt>Special&nbsp;case&nbsp;of&nbsp;'<a href="#pygame2exe-execute">execute</a>()'&nbsp;for&nbsp;operations&nbsp;that&nbsp;process&nbsp;one&nbsp;or<br>
+more&nbsp;input&nbsp;files&nbsp;and&nbsp;generate&nbsp;one&nbsp;output&nbsp;file.&nbsp;&nbsp;Works&nbsp;just&nbsp;like<br>
+'<a href="#pygame2exe-execute">execute</a>()',&nbsp;except&nbsp;the&nbsp;operation&nbsp;is&nbsp;skipped&nbsp;and&nbsp;a&nbsp;different<br>
+message&nbsp;printed&nbsp;if&nbsp;'outfile'&nbsp;already&nbsp;exists&nbsp;and&nbsp;is&nbsp;newer&nbsp;than&nbsp;all<br>
+files&nbsp;listed&nbsp;in&nbsp;'infiles'.&nbsp;&nbsp;If&nbsp;the&nbsp;command&nbsp;defined&nbsp;'self.<strong>force</strong>',<br>
+and&nbsp;it&nbsp;is&nbsp;true,&nbsp;then&nbsp;the&nbsp;command&nbsp;is&nbsp;unconditionally&nbsp;run&nbsp;--&nbsp;does&nbsp;no<br>
+timestamp&nbsp;checks.</tt></dd></dl>
+
+<dl><dt><a name="pygame2exe-mkpath"><strong>mkpath</strong></a>(self, name, mode<font color="#909090">=511</font>)</dt></dl>
+
+<dl><dt><a name="pygame2exe-move_file"><strong>move_file</strong></a>(self, src, dst, level<font color="#909090">=1</font>)</dt><dd><tt>Move&nbsp;a&nbsp;file&nbsp;respecting&nbsp;dry-run&nbsp;flag.</tt></dd></dl>
+
+<dl><dt><a name="pygame2exe-reinitialize_command"><strong>reinitialize_command</strong></a>(self, command, reinit_subcommands<font color="#909090">=0</font>)</dt><dd><tt>#&nbsp;XXX&nbsp;rename&nbsp;to&nbsp;'get_reinitialized_command()'?&nbsp;(should&nbsp;do&nbsp;the<br>
+#&nbsp;same&nbsp;in&nbsp;dist.py,&nbsp;if&nbsp;so)</tt></dd></dl>
+
+<dl><dt><a name="pygame2exe-run_command"><strong>run_command</strong></a>(self, command)</dt><dd><tt>Run&nbsp;some&nbsp;other&nbsp;command:&nbsp;uses&nbsp;the&nbsp;'<a href="#pygame2exe-run_command">run_command</a>()'&nbsp;method&nbsp;of<br>
+Distribution,&nbsp;which&nbsp;creates&nbsp;and&nbsp;finalizes&nbsp;the&nbsp;command&nbsp;object&nbsp;if<br>
+necessary&nbsp;and&nbsp;then&nbsp;invokes&nbsp;its&nbsp;'<a href="#pygame2exe-run">run</a>()'&nbsp;method.</tt></dd></dl>
+
+<dl><dt><a name="pygame2exe-set_undefined_options"><strong>set_undefined_options</strong></a>(self, src_cmd, *option_pairs)</dt><dd><tt>Set&nbsp;the&nbsp;values&nbsp;of&nbsp;any&nbsp;"undefined"&nbsp;options&nbsp;from&nbsp;corresponding<br>
+option&nbsp;values&nbsp;in&nbsp;some&nbsp;other&nbsp;command&nbsp;object.&nbsp;&nbsp;"Undefined"&nbsp;here&nbsp;means<br>
+"is&nbsp;None",&nbsp;which&nbsp;is&nbsp;the&nbsp;convention&nbsp;used&nbsp;to&nbsp;indicate&nbsp;that&nbsp;an&nbsp;option<br>
+has&nbsp;not&nbsp;been&nbsp;changed&nbsp;between&nbsp;'<a href="#pygame2exe-initialize_options">initialize_options</a>()'&nbsp;and<br>
+'<a href="#pygame2exe-finalize_options">finalize_options</a>()'.&nbsp;&nbsp;Usually&nbsp;called&nbsp;from&nbsp;'<a href="#pygame2exe-finalize_options">finalize_options</a>()'&nbsp;for<br>
+options&nbsp;that&nbsp;depend&nbsp;on&nbsp;some&nbsp;other&nbsp;command&nbsp;rather&nbsp;than&nbsp;another<br>
+option&nbsp;of&nbsp;the&nbsp;same&nbsp;command.&nbsp;&nbsp;'src_cmd'&nbsp;is&nbsp;the&nbsp;other&nbsp;command&nbsp;from<br>
+which&nbsp;option&nbsp;values&nbsp;will&nbsp;be&nbsp;taken&nbsp;(a&nbsp;command&nbsp;object&nbsp;will&nbsp;be&nbsp;created<br>
+for&nbsp;it&nbsp;if&nbsp;necessary);&nbsp;the&nbsp;remaining&nbsp;arguments&nbsp;are<br>
+'(src_option,dst_option)'&nbsp;tuples&nbsp;which&nbsp;mean&nbsp;"take&nbsp;the&nbsp;value&nbsp;of<br>
+'src_option'&nbsp;in&nbsp;the&nbsp;'src_cmd'&nbsp;command&nbsp;object,&nbsp;and&nbsp;copy&nbsp;it&nbsp;to<br>
+'dst_option'&nbsp;in&nbsp;the&nbsp;current&nbsp;command&nbsp;object".</tt></dd></dl>
+
+<dl><dt><a name="pygame2exe-spawn"><strong>spawn</strong></a>(self, cmd, search_path<font color="#909090">=1</font>, level<font color="#909090">=1</font>)</dt><dd><tt>Spawn&nbsp;an&nbsp;external&nbsp;command&nbsp;respecting&nbsp;dry-run&nbsp;flag.</tt></dd></dl>
+
+<dl><dt><a name="pygame2exe-warn"><strong>warn</strong></a>(self, msg)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="distutils.cmd.html#Command">distutils.cmd.Command</a>:<br>
+<dl><dt><strong>sub_commands</strong> = []</dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-isSystemDLL"><strong>isSystemDLL</strong></a>(pathname)</dt></dl>
+</td></tr></table>
+</body></html>
