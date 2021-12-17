@@ -55,17 +55,13 @@ class Monster(Sprite):
 
 
 class Doodle(Sprite):
-    " ласс, описывающий дудлера"
     name = "Anonymus"
-    "»м€"
     score = 0
-    " оличество очков"
     alive = 1
     ySpeed = 5
     x = doodle_start_position[0]
     y = doodle_start_position[1]
     def __init__(self, name):
-        "»нициализаци€"
         pygame.sprite.Sprite.__init__(self)
         self.name = name
         self.img_r = pygame.image.load('img/doodle.png').convert()
@@ -76,13 +72,11 @@ class Doodle(Sprite):
         self.rect.center = (self.x,self.y)
 
     def _move(self):
-        "метод, меремещающий дудлера"
         self.rect.center = (self.x,self.y)
         if self.y >= screen_height:
             self.alive = 0     
     
     def get_legs_rect(self):
-        "метод, получающий пр€моугольник под ногами дудлера" 
         left = self.rect.left + self.rect.width*0.1
         top = self.rect.top + self.rect.height*0.9
         width = self.rect.width*0.6
@@ -91,7 +85,6 @@ class Doodle(Sprite):
 		
     
     def set_x(self, x):
-        "метод, устанавливающий положение дудлера по оси X"
         if x < self.x:
             self.image = self.img_l
         elif x > self.x:
@@ -102,7 +95,6 @@ class Doodle(Sprite):
         self._move()
     
     def inc_y_speed(self, speed):
-        "метод, увеличивающий скорость дудлера"
         self.ySpeed = self.ySpeed + speed
     
     def inc_score(self, score):

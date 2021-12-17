@@ -210,4 +210,4 @@ class ExitLocation(Location):
     def __init__(self, parent, name, score):
         Location.__init__(self, parent)
         self.background = pygame.image.load('img/background.png')
-        print "Exiting"
+        print("Exiting")

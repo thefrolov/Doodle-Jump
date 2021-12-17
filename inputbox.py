@@ -41,8 +41,8 @@ def display_box(screen, message):
 
 def ask(screen, question):
   pygame.font.init()
-  current_string = []
-  display_box(screen, question + ": " + string.join(current_string,""))
+  current_string = ""
+  display_box(screen, "{q}: {s}".format(q = question, s = current_string))
   while 1:
     inkey = get_key()
     if inkey == K_BACKSPACE:
@@ -50,11 +50,11 @@ def ask(screen, question):
     elif inkey == K_RETURN:
       break
     elif inkey == K_MINUS:
-      current_string.append("_")
+      current_string += ("_")
     elif inkey == K_ESCAPE:
         return None
     elif inkey <= 127:
-      current_string.append(chr(inkey))
-    display_box(screen, question + ": " + string.join(current_string,""))
-  return string.join(current_string,"")
+      current_string += chr(inkey)
+    display_box(screen, "{q}: {s}".format(q = question, s = current_string))
+  return current_string
 
